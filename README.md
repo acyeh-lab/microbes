@@ -7,4 +7,5 @@ This project is geared towards cataloguing all known anti-microbial TCRs for mus
 ## Murine TCRs
 #### 1) SFB (7B8)            / DVQFSGAVPNKTD, SFBNYU_003340 (568-880) / H2-IAb / segmented filamentous bacteria / PMID: 24739972 
 #### 2) CBir1                / YSNANILSA, CBir1 flagellin 464-472     / H2-IAb / commensal flagellin            / PMID: 29777027 
-#### 3) S.epi (f-MIIINA)     / f-MIIINA, unknown                      / H2-M3  / unknown                        / PMID: 29358051
+#### 3) S.epi (f-MIIINA)     / f-MIIINA, unknown                      / H2-M3  / S. epi formylated peptide      / PMID: 29358051
+#### 3) HH7-2Tg              / f-MIIINA, unknown                      / H2-M3  / S. epi formylated peptide      / PMID: 29358051
