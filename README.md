@@ -1,8 +1,6 @@
-# acyeh-lab/microbes
-This project is geared towards identifying microbes relevant to HCT as well as microbe-directed TCRs.
+# Microbial TCRs
+This project is geared towards cataloguing microbe-directed TCRs.
 Each individual folder will contain relevant references for each TCR listed below
-
-
 
 | Species       | TCR Name      | Peptide         | Protein                   | Target                             | MHC    | PMID     |
 | ------------- | ------------- | --------------- | ------------------------  | ---------------------------------- | ------ | -------- |
@@ -12,3 +10,7 @@ Each individual folder will contain relevant references for each TCR listed belo
 | Murine        | HH7-2         | QESPRIAAAYTIKGA | E2 epitope, HH_1713       | H. hepaticus                       | H2-IAb | 29414937 |
 | Murine        | HH5-1         | GNAYISVLAHYGKNG | E1 epitope, HH_1713       | H. hepaticus                       | H2-IAb | 29414937 |
 | Murine        | Amuc124       | TLYIGSGAILS     | Amuc_RS03735 (Am3735-1)   | A. muciniphilia                    | H2-IAb | 31221858 |
+
+
+# Microbes in HSCT
+This project is geared towards cataloguing microbes relevant to HCT.
