@@ -15,39 +15,39 @@ Each individual folder will contain relevant references for each TCR listed belo
 
 # Microbes in HSCT
 This project is geared towards cataloguing microbes relevant to HCT.
-| Host Species    | Taxa                          | Timing of Association | GVHD Risk       | Mechansim        | PMID     | Strength |
+| Host Species    | Taxa                          | Timing of Association | Risk Factor   | Mechansim        | PMID     | Strength |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Human / Murine | Bacteroides ovatus             | Post-tx       | Decrease        | Increase mucin    | 24739972 | Strong | 
-| Human / Murine | Bacteroides thetaiotaomicron   | Post-tx       | Increase        | Decrease mucin    | 36179667 | Strong | 
-| Murine         | Akkermansia muciniphila        | Post-tx       | Increase        | Decrease mucin    | 27194729 | Strong | 
-| Human          | Enterococcus faecium           | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
-| Murine         | Enterococcus faecalis          | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
-| Human          | Blautia (genus)                | Post-tx       | Decrease        | ??  | 25977230 | Moderate |
-| Human          | Ruminococcus (genus)           | Post-tx       | Decrease        | ??  | 28256022 | Weak |
-| Human          | Erysipelatoclostridium ramosum | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Bacteroides thetaiotaomicron   | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Blautia luti                   | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Candidatus soleaferrea         | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Butyricicoccus spp.            | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Blautia spp.                   | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Dorea spp.                     | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Ruminococcus spp.              | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Clostridium clostridioforme    | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Bacteroides ovatus             | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Bacteroides caccae             | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
-| Human          | Roseburia hominis              | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Eisenbergiella spp.            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Veillonella parvula            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Enterococcus faecium or hirae–like | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Lactobacillus salivarius       | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Lactobacillus fermentum        | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Bacteroides dorei              | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Solobacterium moorei           | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Rothia mucilaginosa            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-| Human          | Veillonella parvula            | Chronic GVHD  | Increase        | ??  | 39017661 | Weak |
-| Human          | Streptococcus salivarius       | Chronic GVHD  | Increase        | ??  | 39017661 | Weak |
-
-
+| Human / Murine | Bacteroides ovatus             | Post-tx       | Decrease GVHD   | Increase mucin    | 24739972 | Strong | 
+| Human / Murine | Bacteroides thetaiotaomicron   | Post-tx       | Increase GVHD   | Decrease mucin    | 36179667 | Strong | 
+| Murine         | Akkermansia muciniphila        | Post-tx       | Increase GVHD   | Decrease mucin    | 27194729 | Strong | 
+| Human          | Enterococcus faecium           | Post-tx       | Increase GVHD   | ?Metalloprotease  | 31780560, 22547653 | Strong | 
+| Murine         | Enterococcus faecalis          | Post-tx       | Increase GVHD   | ?Metalloprotease  | 31780560, 22547653 | Strong | 
+| Human          | Blautia (genus)                | Post-tx       | Decrease GVHD   | ??  | 25977230 | Moderate |
+| Human          | Ruminococcus (genus)           | Post-tx       | Decrease GVHD   | ??  | 28256022 | Weak |
+| Human          | Erysipelatoclostridium ramosum | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Bacteroides thetaiotaomicron   | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Blautia luti                   | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Candidatus soleaferrea         | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Butyricicoccus spp.            | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Blautia spp.                   | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Dorea spp.                     | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Ruminococcus spp.              | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Clostridium clostridioforme    | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Bacteroides ovatus             | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Bacteroides caccae             | PMN recovery  | Decrease GVHD   | ??  | 29020185 | Weak |
+| Human          | Roseburia hominis              | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Eisenbergiella spp.            | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Veillonella parvula            | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Enterococcus faecium or hirae–like | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Lactobacillus salivarius       | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Lactobacillus fermentum        | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Bacteroides dorei              | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Solobacterium moorei           | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Rothia mucilaginosa            | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Veillonella parvula            | Chronic GVHD  | Increase GVHD   | ??  | 39017661 | Weak |
+| Human          | Streptococcus salivarius       | Chronic GVHD  | Increase GVHD   | ??  | 39017661 | Weak |
+| Human          | Escherichia coli               | Post-tx  | Increase BSI   | ?GI Translocation  | 39017661 | Weak |
+| Human          | Klebsiella pneumoniae          | Post-tx  | Increase BSI   | ?GI Translocation  | 39017661 | Weak |
 
 
 
