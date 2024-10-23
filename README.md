@@ -15,7 +15,7 @@ Each individual folder will contain relevant references for each TCR listed belo
 
 # Microbes in HSCT
 This project is geared towards cataloguing microbes relevant to HCT.
-| Host Species    | Taxa                          | Timing of Association | Risk Factor   | Mechansim        | PMID     | Strength |
+| Host Species    | Taxa                          | Timing of Association | Risk Factor   | Mechansim of Action        | PMID     | Strength |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Human / Murine | Bacteroides ovatus             | Post-tx       | Decrease GVHD   | Increase mucin    | 24739972 | Strong | 
 | Human / Murine | Bacteroides thetaiotaomicron   | Post-tx       | Increase GVHD   | Decrease mucin    | 36179667 | Strong | 
