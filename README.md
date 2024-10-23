@@ -2,8 +2,9 @@
 This project is geared towards cataloguing microbe-directed TCRs.
 Each individual folder will contain relevant references for each TCR listed below
 
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | 
+
 | Host Species  | TCR Name      | Peptide         | Protein                   | Target                             | Native MHC    | PMID     |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | 
 | ------------- | ------------- | --------------- | ------------------------  | ---------------------------------- | ------------- | -------- |
 | Murine        | SFB (7B8)     | DVQFSGAVPNKTD   | SFBNYU_003340 (568-880)   | Candidatus Arthromatus (Savagella) | H2-IAb        | 24739972 |
 | Murine        | CBir1         | YSNANILSA       | CBir1 flagellin (464-472) | Commensal flagellin                | H2-IAb        | 29777027, 22923434 |
