@@ -1,7 +1,6 @@
-# acyeh-lab/microbial-TCRs
-This project is geared towards cataloguing all known anti-microbial TCRs for mus musculus and humans.  Each individual folder will contain relevant references for each TCR listed below
-
-
+# acyeh-lab/microbes
+This project is geared towards identifying microbes relevant to HCT as well as microbe-directed TCRs.
+Each individual folder will contain relevant references for each TCR listed below
 
 # TCR Name / TCRA / TCRB /  Peptide / MHC / Target / Reference
 ## Murine TCRs
