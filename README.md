@@ -22,7 +22,7 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Murine         | Akkermansia muciniphila      | Post-tx       | Increase        | Decrease mucin    | 27194729 |
 | Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 |
 | Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 |
-| Human          | Blautia (genus)              | Post-tx       | Increase        | ??  | 25977230 |
+| Human          | Blautia (genus)              | Post-tx       | Decrease        | ??  | 25977230 |
 
 
 
