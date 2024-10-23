@@ -15,6 +15,13 @@ Each individual folder will contain relevant references for each TCR listed belo
 
 # Microbes in HSCT
 This project is geared towards cataloguing microbes relevant to HCT.
-| Host Species    | Taxa                      | Timing        | GVHD Risk       | Mechansim       | PMID     |
+| Host Species    | Taxa                         | Timing        | GVHD Risk       | Mechansim        | PMID     |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Humans / Murine | Bacteroides Ovatus        | Post-tx       | Decrease        | Increase mucin  | 24739972 |
+| Human / Murine | Bacteroides ovatus           | Post-tx       | Decrease        | Increase mucin    | 24739972 |
+| Human / Murine | Bacteroides thetaiotaomicron | Post-tx       | Increase        | Decrease mucin    | 36179667 |
+| Murine         | Akkermansia muciniphila      | Post-tx       | Increase        | Decrease mucin    | 27194729 |
+| Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560 |
+| Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560 |
+
+
+
