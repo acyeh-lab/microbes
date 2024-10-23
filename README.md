@@ -44,7 +44,8 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Bacteroides dorei              | PMN recovery  | Increase        | ??  | 29020185 | Weak |
 | Human          | Solobacterium moorei           | PMN recovery  | Increase        | ??  | 29020185 | Weak |
 | Human          | Rothia mucilaginosa            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
-
+| Human          | Veillonella parvula            | Chronic GVHD  | Increase        | ??  | 39017661 | Weak |
+| Human          | Streptococcus salivarius       | Chronic GVHD  | Increase        | ??  | 39017661 | Weak |
 
 
 
