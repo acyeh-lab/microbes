@@ -15,15 +15,27 @@ Each individual folder will contain relevant references for each TCR listed belo
 
 # Microbes in HSCT
 This project is geared towards cataloguing microbes relevant to HCT.
-| Host Species    | Taxa                         | Timing        | GVHD Risk       | Mechansim        | PMID     | Strength |
+| Host Species    | Taxa                          | Timing        | GVHD Risk       | Mechansim        | PMID     | Strength |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Human / Murine | Bacteroides ovatus           | Post-tx       | Decrease        | Increase mucin    | 24739972 | Strong | 
-| Human / Murine | Bacteroides thetaiotaomicron | Post-tx       | Increase        | Decrease mucin    | 36179667 | Strong | 
-| Murine         | Akkermansia muciniphila      | Post-tx       | Increase        | Decrease mucin    | 27194729 | Strong | 
-| Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
-| Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
-| Human          | Blautia (genus)              | Post-tx       | Decrease        | ??  | 25977230 | Moderate |
-| Human          | Ruminococcus (genus)         | Post-tx       | Decrease        | ??  | 28256022 | Weak |
+| Human / Murine | Bacteroides ovatus             | Post-tx       | Decrease        | Increase mucin    | 24739972 | Strong | 
+| Human / Murine | Bacteroides thetaiotaomicron   | Post-tx       | Increase        | Decrease mucin    | 36179667 | Strong | 
+| Murine         | Akkermansia muciniphila        | Post-tx       | Increase        | Decrease mucin    | 27194729 | Strong | 
+| Human          | Enterococcus faecium           | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
+| Murine         | Enterococcus faecalis          | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
+| Human          | Blautia (genus)                | Post-tx       | Decrease        | ??  | 25977230 | Moderate |
+| Human          | Ruminococcus (genus)           | Post-tx       | Decrease        | ??  | 28256022 | Weak |
+| Human          | Erysipelatoclostridium ramosum | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Bacteroides thetaiotaomicron   | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Blautia luti                   | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Candidatus soleaferrea         | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Butyricicoccus spp.            | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Blautia spp.                   | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Dorea spp.                     | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Ruminococcus spp.              | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Clostridium clostridioforme    | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Bacteroides ovatus             | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+| Human          | Bacteroides caccae             | Post-tx       | Decrease        | ??  | 29020185 | Weak |
+
 
 
 
