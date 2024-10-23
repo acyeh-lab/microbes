@@ -3,9 +3,10 @@ This project is geared towards identifying microbes relevant to HCT as well as m
 Each individual folder will contain relevant references for each TCR listed below
 
 
-| Species | TCR Name | Peptide | Protein | Target | MHC | PMID |
+
+| Species       | TCR Name | Peptide | Protein | Target | MHC | PMID |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Murine | SFB (7B8) | DVQFSGAVPNKTD | SFBNYU_003340 (568-880) | Candidatus Arthromatus (Savagella) | H2-IAb | 24739972 |
+| Murine        | SFB (7B8) | DVQFSGAVPNKTD | SFBNYU_003340 (568-880) | Candidatus Arthromatus (Savagella) | H2-IAb | 24739972 |
 
 
 # TCR Name / TCRA / TCRB /  Peptide / MHC / Target / Reference
