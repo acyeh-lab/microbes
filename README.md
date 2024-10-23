@@ -3,10 +3,12 @@ This project is geared towards identifying microbes relevant to HCT as well as m
 Each individual folder will contain relevant references for each TCR listed below
 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
+| Species | TCR Name | Peptide | Protein | Target | MHC | PMID |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Murine | SFB (7B8) | DVQFSGAVPNKTD | SFBNYU_003340 (568-880) | Candidatus Arthromatus (Savagella) | H2-IAb | 24739972 |
 | Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+
+
 # TCR Name / TCRA / TCRB /  Peptide / MHC / Target / Reference
 ## Murine TCRs
 #### 1) SFB (7B8)   /          /           / DVQFSGAVPNKTD, SFBNYU_003340 (568-880) / H2-IAb / Segmented Filamentous Bacteria / PMID: 24739972 
