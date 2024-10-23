@@ -15,14 +15,16 @@ Each individual folder will contain relevant references for each TCR listed belo
 
 # Microbes in HSCT
 This project is geared towards cataloguing microbes relevant to HCT.
-| Host Species    | Taxa                         | Timing        | GVHD Risk       | Mechansim        | PMID     |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Human / Murine | Bacteroides ovatus           | Post-tx       | Decrease        | Increase mucin    | 24739972 |
-| Human / Murine | Bacteroides thetaiotaomicron | Post-tx       | Increase        | Decrease mucin    | 36179667 |
-| Murine         | Akkermansia muciniphila      | Post-tx       | Increase        | Decrease mucin    | 27194729 |
-| Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 |
-| Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 |
-| Human          | Blautia (genus)              | Post-tx       | Decrease        | ??  | 25977230 |
+| Host Species    | Taxa                         | Timing        | GVHD Risk       | Mechansim        | PMID     | Strength |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Human / Murine | Bacteroides ovatus           | Post-tx       | Decrease        | Increase mucin    | 24739972 | Strong | 
+| Human / Murine | Bacteroides thetaiotaomicron | Post-tx       | Increase        | Decrease mucin    | 36179667 | Strong | 
+| Murine         | Akkermansia muciniphila      | Post-tx       | Increase        | Decrease mucin    | 27194729 | Strong | 
+| Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
+| Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 | Strong | 
+| Human          | Blautia (genus)              | Post-tx       | Decrease        | ??  | 25977230 | Moderate |
+| Human          | Ruminococcus (genus)         | Post-tx       | Decrease        | ??  | 28256022 | Weak |
+
 
 
 
