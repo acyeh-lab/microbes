@@ -35,6 +35,17 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Clostridium clostridioforme    | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
 | Human          | Bacteroides ovatus             | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
 | Human          | Bacteroides caccae             | PMN recovery  | Decrease        | ??  | 29020185 | Weak |
+| Human          | Roseburia hominis              | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Eisenbergiella spp.            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Veillonella parvula            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Enterococcus faecium or hirae–like | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Lactobacillus salivarius       | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Lactobacillus fermentum        | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Bacteroides dorei              | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Solobacterium moorei           | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+| Human          | Rothia mucilaginosa            | PMN recovery  | Increase        | ??  | 29020185 | Weak |
+
+
 
 
 
