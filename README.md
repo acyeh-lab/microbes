@@ -6,7 +6,6 @@ Each individual folder will contain relevant references for each TCR listed belo
 | Species | TCR Name | Peptide | Protein | Target | MHC | PMID |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Murine | SFB (7B8) | DVQFSGAVPNKTD | SFBNYU_003340 (568-880) | Candidatus Arthromatus (Savagella) | H2-IAb | 24739972 |
-| Content Cell  | Content Cell  |
 
 
 # TCR Name / TCRA / TCRB /  Peptide / MHC / Target / Reference
