@@ -20,8 +20,9 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human / Murine | Bacteroides ovatus           | Post-tx       | Decrease        | Increase mucin    | 24739972 |
 | Human / Murine | Bacteroides thetaiotaomicron | Post-tx       | Increase        | Decrease mucin    | 36179667 |
 | Murine         | Akkermansia muciniphila      | Post-tx       | Increase        | Decrease mucin    | 27194729 |
-| Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560 |
-| Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560 |
+| Human          | Enterococcus faecium         | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 |
+| Murine         | Enterococcus faecalis        | Post-tx       | Increase        | ?Metalloprotease  | 31780560, 22547653 |
+| Human          | Blautia (genus)              | Post-tx       | Increase        | ?Metalloprotease  | 25977230 |
 
 
 
