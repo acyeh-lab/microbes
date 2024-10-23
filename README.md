@@ -2,7 +2,7 @@
 This project is geared towards cataloguing microbe-directed TCRs.
 Each individual folder will contain relevant references for each TCR listed below
 
-| Left-aligned | Left-aligned | Left-aligned | Left-aligned | Left-aligned | Left-aligned | Left-aligned |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | 
 | Host Species  | TCR Name      | Peptide         | Protein                   | Target                             | Native MHC    | PMID     |
 | ------------- | ------------- | --------------- | ------------------------  | ---------------------------------- | ------------- | -------- |
 | Murine        | SFB (7B8)     | DVQFSGAVPNKTD   | SFBNYU_003340 (568-880)   | Candidatus Arthromatus (Savagella) | H2-IAb        | 24739972 |
