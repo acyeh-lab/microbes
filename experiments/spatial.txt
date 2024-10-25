@@ -1,1 +1,3 @@
 Question: What would be the optimal custom panel add-on for 10x's Xenium 5000 platform if we are interested in looking at the relationship between SFB/7B8 and CBir1 T cells in relation to cognate bacteria?
+
+1) Including TCRalpha and TCRbeta CDR3 regions for both SFB and CBir1 T cells.
