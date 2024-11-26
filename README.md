@@ -52,4 +52,5 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Lachnospiraceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
 | Human          | Ruminococcaceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
 | Human          | Bacillus fragilis         | Post-tx  | Decrease GVHD   | ??  | 33554953 | Weak |
+| Human          | Bifidobacteriaceae (Family)         | Post-tx  | Decrease GVHD   | ??  | 28192251 | Weak |
 
