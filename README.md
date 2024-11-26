@@ -49,7 +49,7 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Escherichia coli               | Post-tx  | Increase BSI   | ?GI Translocation  | ?? (Bhatt A) | Weak |
 | Human          | Klebsiella pneumoniae          | Post-tx  | Increase BSI   | ?GI Translocation  | ?? (Bhatt A) | Weak |
 | Human          | Lactobacillus johnsonii          | Post-tx  | Decrease GVHD   | prevented Enterococcus domination  | 22547653 | Weak |
-
-
+| Human          | Lachnospiraceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
+| Human          | Ruminococcaceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
 
 
