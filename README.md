@@ -48,6 +48,7 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Streptococcus salivarius       | Chronic GVHD  | Increase GVHD   | ??  | 39017661 | Weak |
 | Human          | Escherichia coli               | Post-tx  | Increase BSI   | ?GI Translocation  | ?? (Bhatt A) | Weak |
 | Human          | Klebsiella pneumoniae          | Post-tx  | Increase BSI   | ?GI Translocation  | ?? (Bhatt A) | Weak |
+| Human          | Lactobacillus johnsonii          | Post-tx  | Decrease GVHD   | ??  | 22547653 | Weak |
 
 
 
