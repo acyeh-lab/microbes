@@ -48,6 +48,12 @@ For this file, we shoudl get 27,159 entries.
 %S is species name
 %d is date of last update (helpful to find the most recent one if multiple hits) - if this info is not available, output will be in ASN format.
 
+To get the number of unique taxa, can do:
+```
+cut -d' ' -f2 species.txt | sort | uniq | wc -l
+```
+
+
 ## Search for a species
 ```
 grep "Bacteroides thetaiotaomicron" species_summary.txt
@@ -58,6 +64,7 @@ NR_112944.1 818 Bacteroides thetaiotaomicron
 NR_112142.1 818 Bacteroides thetaiotaomicron
 NR_074277.1 818 Bacteroides thetaiotaomicron
 ```
+Note, these are 3 separate accession numbers for the same taxa (818) - difficult to tell which one is more recent as the %d info is not available for this blast db.  So we will keep all of them.
 
 ## Get the 16S sequence for a taxon:
 ```
