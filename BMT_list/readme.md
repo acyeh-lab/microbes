@@ -6,9 +6,9 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Increase GVHD
 
-| **Microbe**                        | **Effect**                                     |
-|------------------------------------|-----------------------------------------------|
-| *Bacteroides thetaiotaomicron*     | Decreases mucin production                    |
+| **Microbe**                        | **Effect**                                     | **Taxonomy ID**          |
+|------------------------------------|-----------------------------------------------|---------------------------|
+| *Bacteroides thetaiotaomicron*     | Decreases mucin production                    | 818  |
 | *Akkermansia muciniphila* (species)| Decreases mucin production (uncertain `?`)    |
 | *Enterococcus faecium* (murine)    | Produces metalloprotease                      |
 | *Enterococcus faecalis*            | Produces metalloprotease                      |
