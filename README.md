@@ -51,7 +51,7 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Lactobacillus johnsonii          | Post-tx  | Decrease GVHD   | prevented Enterococcus domination  | 22547653 | Weak |
 | Human          | Lachnospiraceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
 | Human          | Ruminococcaceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
-| Human          | Bacillus fragilis         | Post-tx  | Decrease GVHD   | ??  | 33554953 | Weak |
+| Human          | Bacteroides fragilis         | Post-tx  | Decrease GVHD   | ??  | 33554953 | Weak |
 | Human          | Bifidobacteriaceae (Family)         | Post-tx  | Decrease GVHD   | ??  | 28192251 | Weak |
 | Human          | Faecalibacterium prausnitzii       | Post-tx  | Decrease GVHD   | butyrate producer  | 29796620 | Moderate |
 
