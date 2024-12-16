@@ -52,6 +52,12 @@ For this file, we shoudl get 27,159 entries.
 ```
 grep "Bacteroides thetaiotaomicron" species_summary.txt
 ```
+Sample output:
+```
+NR_112944.1 818 Bacteroides thetaiotaomicron
+NR_112142.1 818 Bacteroides thetaiotaomicron
+NR_074277.1 818 Bacteroides thetaiotaomicron
+```
 
 ## Get the 16S sequence for a taxon:
 ```
