@@ -38,7 +38,7 @@ These files form a BLAST database that can be queried using BLAST tools. For exa
 blastn -query query.fasta -db 16S_ribosomal_RNA -out results.txt
 ```
 
-# Find all species listed
+## Find all species listed
 ```
 blastdbcmd -db 16S_ribosomal_RNA -entry all -outfmt "%a %T %S" > species_summary.txt
 ```
