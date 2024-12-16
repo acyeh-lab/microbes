@@ -50,8 +50,9 @@ For this file, we shoudl get 27,159 entries.
 
 To get the number of unique taxa, can do:
 ```
-cut -d' ' -f2 species.txt | sort | uniq | wc -l
+cut -d' ' -f2 species_summary.txt | sort | uniq | wc -l
 ```
+We get 21,116 here. Not so bad (out of 27,159 entries).
 
 
 ## Search for a species
