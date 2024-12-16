@@ -43,3 +43,19 @@ blastn -query query.fasta -db 16S_ribosomal_RNA -out results.txt
 blastdbcmd -db 16S_ribosomal_RNA -entry all -outfmt "%a %T %S" > species_summary.txt
 ```
 For this file, we shoudl get 27,159 entries.
+%a is accession number (file)
+%T is official taxonomy ID
+%S is species name
+%d is date of last update (helpful to find the most recent one if multiple hits) - if this info is not available, output will be in ASN format.
+
+## Search for a species
+```
+grep "Bacteroides thetaiotaomicron" species_summary.txt
+```
+
+## Get the 16S sequence for a taxon:
+```
+blastdbcmd -db 16S_ribosomal_RNA -entry NR_112944.1 -outfmt "%f" > NR_112944.1.fasta
+```
+
+
