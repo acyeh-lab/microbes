@@ -7,4 +7,10 @@ In command line / shell, run the following:
 ```
 wget ftp://ftp.ncbi.nlm.nih.gov/blast/db/16S_ribosomal_RNA.tar.gz
 ```
+In the same directory, then run:
+```
+tar -xzvf 16S_ribosomal_RNA.tar.gz
+```
+
+
 
