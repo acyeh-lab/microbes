@@ -42,3 +42,4 @@ blastn -query query.fasta -db 16S_ribosomal_RNA -out results.txt
 ```
 blastdbcmd -db 16S_ribosomal_RNA -entry all -outfmt "%a %T %S" > species_summary.txt
 ```
+For this file, we shoudl get 27,159 entries.
