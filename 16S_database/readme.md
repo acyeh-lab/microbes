@@ -32,9 +32,13 @@ The **16S_ribosomal_RNA.tar.gz** file from NCBI contains a BLAST database for 16
 | `.tar` or `.tar.gz` | `16S_ribosomal_RNA.tar.gz` | Archive containing all the database files, downloaded from NCBI.               |
 
 ## How to Use the Database in BLAST
-
 These files form a BLAST database that can be queried using BLAST tools. For example:
 
 ```
 blastn -query query.fasta -db 16S_ribosomal_RNA -out results.txt
+```
+
+# Find all species listed
+```
+blastdbcmd -db 16S_ribosomal_RNA -entry all -outfmt "%a %T %S" > species_summary.txt
 ```
