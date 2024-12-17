@@ -72,8 +72,3 @@ This document summarizes microbial species and genera associated with either inc
 5. Lactobacilli have been associated with increased risk of GVHD in both human and animal studies.  
 6. Squeegee (Liu Y et al) is a computational method to identify contaminants.
 7. I made sure to include at least the top 10 species (or genus) identified in both upper- and lower- brushings samples in P8792 Sample_1.
-
----
-
-### Contribution
-Feel free to submit a pull request if you have additional information or updates related to microbial influences on GVHD.
