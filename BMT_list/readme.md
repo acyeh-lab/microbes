@@ -49,8 +49,9 @@ This document summarizes microbial species and genera associated with either inc
 | *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | PMID 30323331 | N |
 | *Schaalia (Actinomyces)* | *odontolytica*   | Undefined role | 1660 | High in P8792 | Y (both) |
 | *Haemophilus* | *parainfluenza*             | Undefined role | 888828 | High in P8792 | Y (both) |
-
-
+| *Acidaminococcus* | *intestini*             | Undefined role | 187327 | High in P8792 | Y (both) |
+| *Veillonella* | *ratti*              | Undefined role | 103892 | High in P8792 | Y (both) |
+| *Citrobacter* | *amalonaticus*              | Undefined role | 35703 | High in P8792 | Y (both) |
 
 ---
 
