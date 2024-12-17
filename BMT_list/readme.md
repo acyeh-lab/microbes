@@ -12,12 +12,16 @@ This document summarizes microbial species and genera associated with either inc
 | *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 | PMID 27194729 | Y (lower) |
 | *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 | PMID 31780560, 22547653 | N | 
 | *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 | PMID 31780560, 22547653 | Y (lower) |
-| *Rothia* | *mucilaginosa*              | Undefined role                                | 43675 |  | Y (both) |
-| *Lactobacillus (Limosilactobacillus)*  | *fermentum*         | Weak association with GVHD | 1613 | PMID 29020185 | Y (both) |
+| *Rothia* | *mucilaginosa*              | Undefined role                                | 43675 | PMID 29020185, high in P8792 | Y (both) |
+| *Lactobacillus (Limosilactobacillus)*  | *fermentum*      | Weak association with GVHD | 1613 | PMID 29020185 | Y (both) |
+| *Veillonella* | *parvula*              | Undefined role                                | 29466, 479436 | PMID 39017661, high in P8792 | Y (both) |
 | *Streptococcus* (genus) |              | Undefined role                                |
 | *Bifidobacterium* (genus) |            | Observed in pediatric GVHD                    |
 | *Collinsella* (genus) |                | Butyrate producer                             |
 
+
+
+ 
 ---
 
 ## Decrease GVHD
@@ -38,11 +42,12 @@ This document summarizes microbial species and genera associated with either inc
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
 |-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
 | *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | PMID 28256022 | Y (both) |
-| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | Highly represened in P8792 samples | Y (both) |
+| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | High in P8792 | Y (both) |
 | *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | PMID 30323331 | Y (both) | 
 | *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | PMID 30323331 | Y (both) |
 | *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | PMID 30323331 | Y (both) |
 | *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | PMID 30323331 | N |
+| *Schaalia (Actinomyces)* | *odontolytica*           | Undefined role (not classically GI) | 1660 | High in P8792 | N |
 
 ---
 
