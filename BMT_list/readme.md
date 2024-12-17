@@ -6,7 +6,7 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Increase GVHD
 
-| **Microbe (Genus)** | **Microbe (Species)**                      | **Effect**                                     | **Taxonomy ID**          |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** |
 |------------------|------------------|-----------------------------------------------|---------------------------|
 | *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 |
 | *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 |
