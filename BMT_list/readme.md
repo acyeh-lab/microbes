@@ -9,14 +9,14 @@ This document summarizes microbial species and genera associated with either inc
 | **Microbe (Genus)** | **Microbe (Species)**                      | **Effect**                                     | **Taxonomy ID**          |
 |------------------|------------------|-----------------------------------------------|---------------------------|
 | *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 |
-| *Akkermansia* | *muciniphila* (species)| Decreases mucin production (uncertain `?`)    | 349741, 239935 |
+| *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 |
 | *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 |
 | *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 |
 | *Escherichia* | *coli*                 | Undefined role                                | 562 |
 | *Rothia* | *mucilaginosa*              | Undefined role                                | 43675 |
-| *Streptococcus* (genus) |           | Undefined role                                |
-| *Bifidobacterium* (genus) |          | Observed in pediatric GVHD                    |
-| *Collinsella* (genus) |              | Butyrate producer                             |
+| *Streptococcus* (genus) |              | Undefined role                                |
+| *Bifidobacterium* (genus) |            | Observed in pediatric GVHD                    |
+| *Collinsella* (genus) |                | Butyrate producer                             |
 
 ---
 
