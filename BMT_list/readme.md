@@ -6,10 +6,10 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Increase GVHD
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** | **buk (gene)** |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID / RefSeq** | **Rationale** | **P8792 brushing** | **buk (gene)** |
 |------------------|------------------|------------------------|-----------------------|------------|-------|--------|
-| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | PMID 36179667 | Y (lower) |
-| *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 | PMID 27194729 | Y (lower) |
+| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 / GCF_014131755.1 | PMID 36179667 | Y (lower) |
+| *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 / GCF_009731575.1 | PMID 27194729 | Y (lower) |
 | *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 | PMID 31780560, 22547653 | N | 
 | *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 | PMID 31780560, 22547653 | Y (lower) |
 | *Rothia* | *mucilaginosa*              | Undefined role                                | 43675 | PMID 29020185, high in P8792 | Y (both) |
