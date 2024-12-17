@@ -51,7 +51,10 @@ This document summarizes microbial species and genera associated with either inc
 | *Haemophilus* | *parainfluenza*             | Undefined role | 888828 | High in P8792 | Y (both) |
 | *Acidaminococcus* | *intestini*             | Undefined role | 187327 | High in P8792 | Y (both) |
 | *Veillonella* | *ratti*              | Undefined role | 103892 | High in P8792 | Y (both) |
-| *Citrobacter* | *amalonaticus*              | Undefined role | 35703 | High in P8792 | Y (both) |
+| *Citrobacter* | *amalonaticus*              | Undefined role | 35703 | High in P8792 | Y (lower) |
+| *Intestinibacter* | *bartlettii*              | Undefined role | 261299 | High in P8792 | Y (lower) |
+| *Gemella* (genus) |             | Undefined role | 1379, 29391, 84135, 84136, 150240, 1179782, 1179787, 1909670 | High in P8792 | Y (both) |
+
 
 ---
 
