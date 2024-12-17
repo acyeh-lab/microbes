@@ -29,9 +29,9 @@ This document summarizes microbial species and genera associated with either inc
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
 |-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
 | *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | PMID 24739972  | Y (both) |
-| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 | | N | 
-| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 | | Y (both) |
-| *Faecalibacterium* | *prausnitzii*     | Produces butyrate                             | 853 | | Y (lower) |
+| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 | PMID 35216600, 22547653 | N | 
+| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 | PMID 33554953 | Y (both) |
+| *Faecalibacterium* | *prausnitzii*     | Produces butyrate (studied in colitis)        | 853 | PMID 29796620 | Y (lower) |
 | *Blautia* (genus) |                    | Undefined role                                |
 | *Ruminococcus* (genus) |               | Undefined role                                |
 
