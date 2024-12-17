@@ -54,6 +54,7 @@ This document summarizes microbial species and genera associated with either inc
 | *Veillonella* | *ratti*              | Undefined role | 103892 | High in P8792 | Y (both) |
 | *Citrobacter* | *amalonaticus*              | Undefined role | 35703 | High in P8792 | Y (lower) |
 | *Intestinibacter* | *bartlettii*              | Undefined role | 261299 | High in P8792 | Y (lower) |
+| *Thermus* | *aquaticus*          | Negative control | 271 | | N |
 | *Gemella* (genus) |             | Undefined role | 1379, 29391, 84135, 84136, 150240, 1179782, 1179787, 1909670 | High in P8792 | Y (both) |
 
 
@@ -72,6 +73,8 @@ This document summarizes microbial species and genera associated with either inc
 
 4. **Uncertainty**: Microbes marked with a `?` have tentative effects and require further evidence.
 5. Lactobacilli have been associated with increased risk of GVHD in both human and animal studies
+
+6.  Squeegee (Liu Y et al) is a computational method to identify contaminants.
 
 ---
 
