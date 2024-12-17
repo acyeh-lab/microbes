@@ -46,8 +46,8 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Rothia mucilaginosa            | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
 | Human          | Veillonella parvula            | Chronic GVHD  | Increase GVHD   | ??  | 39017661 | Weak |
 | Human          | Streptococcus salivarius       | Chronic GVHD  | Increase GVHD   | ??  | 39017661 | Weak |
-| Human          | Escherichia coli               | Post-tx  | Increase BSI   | ?GI Translocation  | ?? (Bhatt A) | Weak |
-| Human          | Klebsiella pneumoniae          | Post-tx  | Increase BSI   | ?GI Translocation  | ?? (Bhatt A) | Weak |
+| Human          | Escherichia coli               | Post-tx  | Increase BSI   | ?GI Translocation  | 30323331| Weak |
+| Human          | Klebsiella pneumoniae          | Post-tx  | Increase BSI   | ?GI Translocation  | 30323331 | Weak |
 | Human          | Lactobacillus johnsonii          | Post-tx  | Decrease GVHD   | prevented Enterococcus domination  | 35216600, 22547653 | Weak |
 | Human          | Lachnospiraceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
 | Human          | Ruminococcaceae (family)          | Post-tx  | Decrease GVHD   | ??  | 32353108, 31519210 | Weak |
