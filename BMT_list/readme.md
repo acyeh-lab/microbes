@@ -22,14 +22,14 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Decrease GVHD
 
-| **Microbe**                        | **Effect**                                     | **Taxonomy ID**          |
-|------------------------------------|-----------------------------------------------|---------------------------|
-| *Bacteroides ovatus*               | Increases mucin production                    | 28116 |
-| *Lactobacillus johnsonii* (species)| Prevents *Enterococcus* domination (uncertain `?`) | 33959 |
-| *Bacteroides fragilis*                | Undefined role                                | 817, 272559 |
-| *Faecalibacterium prausnitzii*     | Produces butyrate                             | 853 | 
-| *Blautia* (genus)                  | Undefined role                                |
-| *Ruminococcus* (genus)             | Undefined role                                |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** |
+|-----------------|-------------------|-----------------------------------------------|---------------------------|
+| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 |
+| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 |
+| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 |
+| *Faecalibacterium* | *prausnitzii*     | Produces butyrate                             | 853 | 
+| *Blautia* (genus) |                    | Undefined role                                |
+| *Ruminococcus* (genus) |               | Undefined role                                |
 
 ---
 
