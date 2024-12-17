@@ -6,15 +6,14 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Increase GVHD
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** |
-|------------------|------------------|-----------------------------------------------|------------|---------------|
-| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | PMID 36179667 |
-| *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 | PMID 27194729 |
-| *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 | PMID 31780560, 22547653 |
-| *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 | PMID 31780560, 22547653 |
-| *Rothia* | *mucilaginosa*              | Undefined role                                | 43675 |
-| *Lactobacillus (Ligilactobacillus)* | *salivarius*          | Weak association with GVHD | 1624 | PMID 29020185 |
-| *Lactobacillus (Limosilactobacillus)* | *fermentum*         | Weak association with GVHD | 1613 | PMID 29020185 |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
+|------------------|------------------|-----------------------------------------------|------------|-------|--------|
+| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | PMID 36179667 | Y (lower) |
+| *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 | PMID 27194729 | Y (lower) |
+| *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 | PMID 31780560, 22547653 | N | 
+| *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 | PMID 31780560, 22547653 | Y (lower) |
+| *Rothia* | *mucilaginosa*              | Undefined role                                | 43675 |  | Y (both) |
+| *Lactobacillus (Limosilactobacillus)*  | *fermentum*         | Weak association with GVHD | 1613 | PMID 29020185 | Y (both) |
 | *Streptococcus* (genus) |              | Undefined role                                |
 | *Bifidobacterium* (genus) |            | Observed in pediatric GVHD                    |
 | *Collinsella* (genus) |                | Butyrate producer                             |
@@ -23,9 +22,9 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Decrease GVHD
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** |
-|-----------------|-------------------|-----------------------------------------------|-------------|--------------|
-| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | PMID 24739972  |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
+|-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
+| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | PMID 24739972  | Y (both ) |
 | *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 |
 | *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 |
 | *Faecalibacterium* | *prausnitzii*     | Produces butyrate                             | 853 | 
@@ -36,9 +35,10 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Neutral and Controls
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** |
-|-----------------|-------------------|-----------------------------------------------|-------------|--------------|
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
+|-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
 | *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | PMID 28256022 |
+| *Lactobacillus* | *gasseri*            | Undefined role | 47715 | Highly represened in P8792 samples | Y (both) |
 | *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | PMID 30323331 |
 | *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | PMID 30323331 |
 | *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | PMID 30323331 |
