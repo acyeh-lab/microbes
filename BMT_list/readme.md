@@ -25,9 +25,9 @@ This document summarizes microbial species and genera associated with either inc
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
 |-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
 | *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | PMID 24739972  | Y (both ) |
-| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 |
-| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 |
-| *Faecalibacterium* | *prausnitzii*     | Produces butyrate                             | 853 | 
+| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 | | N | 
+| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 | | |
+| *Faecalibacterium* | *prausnitzii*     | Produces butyrate                             | 853 | | |
 | *Blautia* (genus) |                    | Undefined role                                |
 | *Ruminococcus* (genus) |               | Undefined role                                |
 
@@ -37,12 +37,12 @@ This document summarizes microbial species and genera associated with either inc
 
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
 |-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
-| *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | PMID 28256022 |
-| *Lactobacillus* | *gasseri*            | Undefined role | 47715 | Highly represened in P8792 samples | Y (both) |
-| *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | PMID 30323331 |
-| *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | PMID 30323331 |
-| *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | PMID 30323331 |
-| *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | PMID 30323331 |
+| *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | PMID 28256022 | Y (both) |
+| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | Highly represened in P8792 samples | Y (both) |
+| *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | PMID 30323331 | Y (both) | 
+| *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | PMID 30323331 | Y (both) |
+| *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | PMID 30323331 | Y (both) |
+| *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | PMID 30323331 | N |
 
 ---
 
