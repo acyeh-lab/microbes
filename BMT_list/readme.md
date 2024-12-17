@@ -63,18 +63,15 @@ This document summarizes microbial species and genera associated with either inc
 ## Notes
 1. **Mucin Production**:
    - Microbes like *Bacteroides thetaiotaomicron* and *Akkermansia muciniphila* reduce mucin production, contributing to GVHD.
-   - *Bacteroides ovatus* increases mucin, which might be protective.
-
+   - *Bacteroides ovatus* increases mucin, which might be protective.  
 2. **Metalloproteases**:
-   - *Enterococcus faecium* and *Enterococcus faecalis* produce metalloproteases, potentially exacerbating GVHD through tissue damage.
-
+   - *Enterococcus faecium* and *Enterococcus faecalis* produce metalloproteases, potentially exacerbating GVHD through tissue damage.  
 3. **Butyrate Producers**:
-   - *Faecalibacterium prausnitzii* and *Collinsella* produce butyrate, a short-chain fatty acid with anti-inflammatory properties. These may influence GVHD outcomes.
-
-4. **Uncertainty**: Microbes marked with a `?` have tentative effects and require further evidence.
-5. Lactobacilli have been associated with increased risk of GVHD in both human and animal studies
-
-6.  Squeegee (Liu Y et al) is a computational method to identify contaminants.
+   - *Faecalibacterium prausnitzii* and *Collinsella* produce butyrate, a short-chain fatty acid with anti-inflammatory properties. These may influence GVHD outcomes.  
+4. **Uncertainty**: Microbes marked with a `?` have tentative effects and require further evidence.  
+5. Lactobacilli have been associated with increased risk of GVHD in both human and animal studies.  
+6. Squeegee (Liu Y et al) is a computational method to identify contaminants.
+7. I made sure to include at least the top 10 species (or genus) identified in both upper- and lower- brushings samples in P8792 Sample_1.
 
 ---
 
