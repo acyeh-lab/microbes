@@ -40,7 +40,7 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Veillonella parvula            | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
 | Human          | Enterococcus faecium or hirae–like | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
 | Human          | Lactobacillus (Ligilactobacillus) salivarius       | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
-| Human          | Lactobacillus fermentum        | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
+| Human          | Lactobacillus (Limosilactobacillus) fermentum        | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
 | Human          | Bacteroides dorei              | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
 | Human          | Solobacterium moorei           | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
 | Human          | Rothia mucilaginosa            | PMN recovery  | Increase GVHD   | ??  | 29020185 | Weak |
