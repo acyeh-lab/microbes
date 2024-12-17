@@ -54,4 +54,6 @@ This project is geared towards cataloguing microbes relevant to HCT.
 | Human          | Bacteroides fragilis         | Post-tx  | Decrease GVHD   | ??  | 33554953 | Weak |
 | Human          | Bifidobacteriaceae (Family)         | Post-tx  | Decrease GVHD   | ??  | 28192251 | Weak |
 | Human          | Faecalibacterium prausnitzii       | Post-tx  | Decrease GVHD   | butyrate producer  | 29796620 | Moderate |
+| Human          | Lactobacillus rhamnosus       | Post-tx  | No effect   | ?? | 28256022 | Moderate |
+
 
