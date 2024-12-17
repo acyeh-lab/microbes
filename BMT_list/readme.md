@@ -47,7 +47,10 @@ This document summarizes microbial species and genera associated with either inc
 | *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | PMID 30323331 | Y (both) |
 | *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | PMID 30323331 | Y (both) |
 | *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | PMID 30323331 | N |
-| *Schaalia (Actinomyces)* | *odontolytica*           | Undefined role (not classically GI) | 1660 | High in P8792 | N |
+| *Schaalia (Actinomyces)* | *odontolytica*   | Undefined role | 1660 | High in P8792 | Y (both) |
+| *Haemophilus* | *parainfluenza*             | Undefined role | 888828 | High in P8792 | Y (both) |
+
+
 
 ---
 
