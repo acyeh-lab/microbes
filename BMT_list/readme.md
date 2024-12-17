@@ -35,7 +35,6 @@ This document summarizes microbial species and genera associated with either inc
 | *Blautia* (genus) |                    | Undefined role                                | 11121114, 1121115, 1532, 1796615, 1796616, 180164, 1912897, 1917868, 1917888, 1936059, 2025493, 2509240, 2696678, 2763028, 2779518 | PMID 25977230 | Y (lower) |
 | *Ruminococcus* (genus) |               | Undefined role                                | 1264, 1265, 1298596, 213810, 2564099, 33039, 40518, 40519, 438033, 471875, 697329 | PMID 28256022 | N | 
 
-
 ---
 
 ## Neutral and Controls
@@ -56,8 +55,6 @@ This document summarizes microbial species and genera associated with either inc
 | *Intestinibacter* | *bartlettii*              | Undefined role | 261299 | High in P8792 | Y (lower) |
 | *Thermus* | *aquaticus*          | Negative control | 271 | | N |
 | *Gemella* (genus) |             | Undefined role | 1379, 29391, 84135, 84136, 150240, 1179782, 1179787, 1909670 | High in P8792 | Y (both) |
-
-
 ---
 
 ## Notes
