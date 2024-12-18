@@ -23,14 +23,14 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Decrease GVHD
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** | **buk (gene)** |
-|-----------------|-------------------|-----------------------|------------------------|-------------|-------|-------|
-| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | PMID 24739972  | Y (both) |
-| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 | PMID 35216600, 22547653 | N | 
-| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 | PMID 33554953 | Y (both) |
-| *Faecalibacterium* | *prausnitzii*     | Produces butyrate (studied in colitis)        | 853 | PMID 29796620 | Y (lower) |
-| *Blautia* (genus) |                    | Undefined role                                | 11121114, 1121115, 1532, 1796615, 1796616, 180164, 1912897, 1917868, 1917888, 1936059, 2025493, 2509240, 2696678, 2763028, 2779518 | PMID 25977230 | Y (lower) | KEGG 2.7.2.7 (B.parvula, B.producta)|
-| *Ruminococcus* (genus) |               | Undefined role                                | 1264, 1265, 1298596, 213810, 2564099, 33039, 40518, 40519, 438033, 471875, 697329 | PMID 28256022 | N | 
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** |**Rationale** | **P8792 brushing** | **buk (gene)** |
+|-----------------|-------------------|-----------------------|----------|--------------|-------------|-------|-------|
+| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | GCF_001314995.1 | PMID 24739972  | Y (both) |
+| *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 | GCF_014058685.1 | PMID 35216600, 22547653 | N | 
+| *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 | GCF_000025985.1 | PMID 33554953 | Y (both) |
+| *Faecalibacterium* | *prausnitzii*     | Produces butyrate (studied in colitis)        | 853 | GCF_000154385.1 | PMID 29796620 | Y (lower) |
+| *Blautia* (genus) |                    | Undefined role                                | 11121114, 1121115, 1532, 1796615, 1796616, 180164, 1912897, 1917868, 1917888, 1936059, 2025493, 2509240, 2696678, 2763028, 2779518 | GCF_010669205.1, GCF_025147765.1, GCF_025148125.1, GCF_033096465.1, GCF_034356035.1, GCF_034355335.1, GCF_002222595.2, GCF_020215665.1, GCF_001689125.2, GCF_015159595.1, GCF_003287895.1, GCF_024622975.1, GCF_900258535.1, GCF_004123145.1, GCF_002270465.1, GCF_014297355.1, GCF_014287615.1, GCF_040095955.1, GCF_040096615.1, GCF_020686995.1, GCF_014287535.1, GCF_025566865.1, GCF_014297245.1, GCF_025566965.1, GCF_040096655.1, GCF_013304825.1, GCF_014385405.1, GCF_020554845.1, GCF_013300845.1 | PMID 25977230 | Y (lower) | KEGG 2.7.2.7 (B.parvula, B.producta)|
+| *Ruminococcus* (genus) |               | Undefined role                                | 1264, 1265, 1298596, 213810, 2564099, 33039, 40518, 40519, 438033, 471875, 697329 | GCF_000179635.2, GCF_000723465.1, GCF_025151995.1, GCF_005601135.1, GCF_000210095.1, GCF_000518765.1, GCF_014287355.1, GCF_014288065.1, GCF_020687545.1, GCF_016680995.1, GCF_014863965.1, GCF_041331195.1 | PMID 28256022 | N | 
 
 ---
 
