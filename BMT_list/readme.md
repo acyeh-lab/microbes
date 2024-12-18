@@ -38,7 +38,7 @@ This document summarizes microbial species and genera associated with either inc
 
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** | **Rationale** | **P8792 brushing** |
 |-----------------|-------------------|----------------------|------------------------|-------------|-------|-------|
-| *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | GCF_006151905.1 | PMID 28256022 | Y (both) |
+| *Lactobacillus (Lacticaseibacillus)* | *rhamnosus*          | neutral in study  | 47715 | GCF_006151905.1 | PMID 28256022 | Y (both) |
 | *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | GCF_000014425.1 | High in P8792 | Y (both) |
 | *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | GCF_000005845.2, GCF_000008865.2 | PMID 30323331 | Y (both) | 
 | *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | GCF_000240185.1 | PMID 30323331 | Y (both) |
