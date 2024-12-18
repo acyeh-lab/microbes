@@ -40,7 +40,7 @@ This document summarizes microbial species and genera associated with either inc
 |-----------------|-------------------|----------------------|------------------------|-------------|-------|-------|
 | *Lactobacillus (Lacticaseibacillus)* | *rhamnosus*          | neutral in study  | 47715 | GCF_006151905.1 | PMID 28256022 | Y (both) |
 | *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | GCF_000014425.1 | High in P8792 | Y (both) |
-| *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | GCF_000005845.2, GCF_000008865.2 | PMID 30323331 | Y (both) | 
+| *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | GCF_000005845.2 (K12) | PMID 30323331 | Y (both) | 
 | *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | GCF_000240185.1 | PMID 30323331 | Y (both) |
 | *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | GCF_006094375.1 | PMID 30323331 | Y (both) |
 | *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | GCF_000006765.1 | PMID 30323331 | N |
