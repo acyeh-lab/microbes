@@ -6,7 +6,7 @@ wget https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/accession2taxid/nucl_gb.accession
 Of note, this is a huge file - it contains all bacterial taxa and accession numbers associated with that taxa (all genes).
 
 
-For bacterial genomes, we used NCBI Datasets to download all relevant taxa / accession numbers into the following directory:
+For bacterial genomes, we used NCBI Datasets (https://github.com/acyeh-lab/NCBIDatasets) to download all relevant taxa / accession numbers into the following directory:
 ```
 /fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/
 ```
