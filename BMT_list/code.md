@@ -18,10 +18,11 @@ We then run Prokka to obtain annotated datasets For example:
 
 A description of Prokka output can be found here: "https://github.com/acyeh-lab/Prokka"
 
-Using this pipeline, we have stored annotated datasets for all of the relevant taxa, for example:
+Using this pipeline, we have stored annotated datasets for all of the relevant taxa, for example, using the base directory "/fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/":
 ```
-/fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/Bacteroides_thetaiotaomicron/ncbi_dataset/data/GCF_014131755.1/annotation_output
-/fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/Akkermansia_muciniphilia/ncbi_dataset/data/GCF_009731575.1/annotation_output
+Bacteroides_thetaiotaomicron/ncbi_dataset/data/GCF_014131755.1/annotation_output
+Akkermansia_muciniphilia/ncbi_dataset/data/GCF_009731575.1/annotation_output
+Enterococcus_faecalis/ncbi_dataset/data/GCF_000393015.1/annotation_output
 ```
 
 This can assist in the search of genes, such as the ```buk``` gene.
