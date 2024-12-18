@@ -36,22 +36,22 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Neutral and Controls
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **Rationale** | **P8792 brushing** |
-|-----------------|-------------------|-----------------------------------------------|-------------|-------|-------|
-| *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | PMID 28256022 | Y (both) |
-| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | High in P8792 | Y (both) |
-| *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | PMID 30323331 | Y (both) | 
-| *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | PMID 30323331 | Y (both) |
-| *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | PMID 30323331 | Y (both) |
-| *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | PMID 30323331 | N |
-| *Schaalia (Actinomyces)* | *odontolytica*   | Undefined role | 1660 | High in P8792 | Y (both) |
-| *Haemophilus* | *parainfluenza*             | Undefined role | 888828 | High in P8792 | Y (both) |
-| *Acidaminococcus* | *intestini*             | Undefined role | 187327 | High in P8792 | Y (both) |
-| *Veillonella* | *ratti*              | Undefined role | 103892 | High in P8792 | Y (both) |
-| *Citrobacter* | *amalonaticus*              | Undefined role | 35703 | High in P8792 | Y (lower) |
-| *Intestinibacter* | *bartlettii*              | Undefined role | 261299 | High in P8792 | Y (lower) |
-| *Thermus* | *aquaticus*          | Negative control | 271 | | N |
-| *Gemella* (genus) |             | Undefined role | 1379, 29391, 84135, 84136, 150240, 1179782, 1179787, 1909670 | High in P8792 | Y (both) |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** | **Rationale** | **P8792 brushing** |
+|-----------------|-------------------|----------------------|------------------------|-------------|-------|-------|
+| *Lactobacillus* | *rhamnosus*          | a.k.a. Lacticaseibacillus rhamnosus  (neutral in study)  | 47715 | GCF_006151905.1 | PMID 28256022 | Y (both) |
+| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | GCF_000014425.1 | High in P8792 | Y (both) |
+| *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | GCF_000005845.2, GCF_000008865.2 | PMID 30323331 | Y (both) | 
+| *Klebsiella* | *pneumoniaea*           | Undefined role (increased BSI)                           | 573 | GCF_000240185.1 | PMID 30323331 | Y (both) |
+| *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | GCF_006094375.1 | PMID 30323331 | Y (both) |
+| *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | GCF_000006765.1 | PMID 30323331 | N |
+| *Schaalia (Actinomyces)* | *odontolytica*   | Undefined role | 1660 | GCF_031191545.1 | High in P8792 | Y (both) |
+| *Haemophilus* | *parainfluenza*             | Undefined role | 888828 | GCF_016127215.1 | High in P8792 | Y (both) |
+| *Acidaminococcus* | *intestini*             | Undefined role | 187327 | GCF_025144545.1 | High in P8792 | Y (both) |
+| *Veillonella* | *ratti*              | Undefined role | 103892 | GCF_003992115.1 | High in P8792 | Y (both) |
+| *Citrobacter* | *amalonaticus*              | Undefined role | 35703 | GCF_020099335.1 | High in P8792 | Y (lower) |
+| *Intestinibacter* | *bartlettii*              | Undefined role | 261299 | GCF_025148965.1 | High in P8792 | Y (lower) |
+| *Thermus* | *aquaticus*          | Negative control | 271 | GCF_001399775.1 | | N |
+| *Gemella* (genus) |             | Undefined role | 1379, 29391, 84135, 84136, 150240, 1179782, 1179787, 1909670 | GCF_900476045.1, GCF_009730295.1, GCF_008692995.1, GCF_000425665.1, GCF_000469465.1, GCF_900120125.1 | High in P8792 | Y (both) |
 
 ---
 
