@@ -8,7 +8,10 @@ For bacterial genomes, we used NCBI Datasets to download all relevant taxa / acc
 ```
 /fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/
 ```
+
 We then run Prokka to obtain annotated datasets For example:
 ```
 /fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/Akkermansia_muciniphilia/ncbi_dataset/data/GCF_009731575.1/annotation_output
 ```
+
+A description of Prokka output can be found here: "https://github.com/acyeh-lab/Prokka"
