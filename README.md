@@ -2,15 +2,17 @@
 This project is geared towards cataloguing microbe-directed TCRs.
 Each individual folder will contain relevant references for each TCR listed below
 
-
 | Host Species  | TCR Name      | Peptide         | Protein                   | Target                             | Native MHC    | PMID     |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | 
-| Murine        | SFB (7B8)     | DVQFSGAVPNKTD   | SFBNYU_003340 (568-880)   | Candidatus Arthromatus (Savagella) | H2-IAb        | 24739972 |
-| Murine        | CBir1         | YSNANILSA       | CBir1 flagellin (464-472) | Commensal flagellin                | H2-IAb        | 29777027, 22923434 |
-| Murine        | Bowie         | f-MIIINA        | unknown                   | S. epi formylated peptide          | H2-M3         | 29358051 |
-| Murine        | HH7-2         | QESPRIAAAYTIKGA | E2 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 |
-| Murine        | HH5-1         | GNAYISVLAHYGKNG | E1 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 |
-| Murine        | Amuc124       | TLYIGSGAILS     | Amuc_RS03735 (Am3735-1)   | A. muciniphilia                    | H2-IAb        | 31221858 |
+| Murine        | SFB (7B8)     | DVQFSGAVPNKTD   | SFBNYU_003340 (568-880)   | Candidatus Arthromatus (Savagella) | H2-IAb        | 24739972 (2014 Nature; Yang Y et al) |
+| Murine        | CBir1         | YSNANILSA       | CBir1 flagellin (464-472) | Commensal flagellin                | H2-IAb        | 29777027, 22923434 (2018 J. Immunol; Chiaranunt P et al / 2012 Science; Hand TW et al) |
+| Murine        | Bowie         | f-MIIINA        | unknown                   | S. epi formylated peptide          | H2-M3         | 29358051 (2018 Cell; Linehan J et al) |
+| Murine        | HH7-2         | QESPRIAAAYTIKGA | E2 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 (2018 Nature; Xu M et al) |
+| Murine        | HH5-1         | GNAYISVLAHYGKNG | E1 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 (2018 Nature; Xu M et al) |
+| Murine        | Amuc124       | TLYIGSGAILS     | Amuc_RS03735 (Am3735-1)   | A. muciniphilia                    | H2-IAb        | 31221858 (2019 Science; Ansaldo E et al) |
+| Murine        | H1-26 and many others | YDAFAINMV | Substrate-binding protein (SBP 405-413) | Firmicute          | H2-IAb        | 37587342 (2024 Nature; Nagashima K et al) |
+
+--
 
 
 # Microbes in HSCT
