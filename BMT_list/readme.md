@@ -43,7 +43,7 @@ This document summarizes microbial species and genera associated with either inc
 | *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | GCF_000005845.2 (K12) | PMID 30323331 | Y (both) | 
 | *Klebsiella* | *pneumoniae*           | Undefined role (increased BSI)                           | 573 | GCF_000240185.1 | PMID 30323331 | Y (both) |
 | *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | GCF_006094375.1 | PMID 30323331 | Y (both) |
-| *Psuedomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | GCF_000006765.1 | PMID 30323331 | N |
+| *Pseudomonas* | *aeruginosa*           | Undefined role (not classically GI)                      | 287 | GCF_000006765.1 | PMID 30323331 | N |
 | *Schaalia (Actinomyces)* | *odontolytica*   | Undefined role | 1660 | GCF_031191545.1 | High in P8792 | Y (both) |
 | *Haemophilus* | *parainfluenza*             | Undefined role | 888828 | GCF_016127215.1 | High in P8792 | Y (both) |
 | *Acidaminococcus* | *intestini*             | Undefined role | 187327 | GCF_025144545.1 | High in P8792 | Y (both) |
