@@ -4,7 +4,7 @@ Each individual folder will contain relevant references for each TCR listed belo
 
 | Host Species  | TCR Name      | Peptide         | Protein                   | Target                             | Native MHC    | PMID     | Manuscript |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Murine        | SFB (7B8)     | DVQFSGAVPNKTD   | SFBNYU_003340 (568-880)   | Candidatus Arthromatus (Savagella) | H2-IAb        | 24739972 | 2014 Nature; Yang Y et al |
+| Murine        | SFB (7B8)     | DVQFSGAVPNKTD   | SFBNYU_003340 (568-880)   | Candidatus arthromatus (Savagella) | H2-IAb        | 24739972 | 2014 Nature; Yang Y et al |
 | Murine        | CBir1         | YSNANILSA       | CBir1 flagellin (464-472) | Commensal flagellin                | H2-IAb        | 29777027, 22923434 | 2018 J. Immunol; Chiaranunt P et al / 2012 Science; Hand TW et al |
 | Murine        | Bowie         | f-MIIINA        | unknown                   | S. epi formylated peptide          | H2-M3         | 29358051 | 2018 Cell; Linehan J et al |
 | Murine        | HH7-2         | QESPRIAAAYTIKGA | E2 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 | 2018 Nature; Xu M et al |
