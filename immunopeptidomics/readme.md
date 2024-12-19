@@ -1,0 +1,7 @@
+# Class II elution experiments with Monash
+202408_Pooled_Taconic_Bac_Query.csv
+202408_Pooled_Taconic_B6_Query.csv
+202408_Pooled_Jax_Bac_Query.csv
+202408_Pooled_Jax_B6_Query.csv
+202408_Pooled_Hill_Bac_Query.csv
+202408_Pooled_Hill_B6_Query.csv
