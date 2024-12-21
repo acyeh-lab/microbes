@@ -26,3 +26,8 @@ Enterococcus_faecalis/ncbi_dataset/data/GCF_000393015.1/annotation_output
 ```
 
 This can assist in the search of genes, such as the ```buk``` gene.
+
+To delete mid-level "ncbi_dataset.zip" files after unzipping:
+```
+find . -mindepth 2 -maxdepth 2 -type f -name "*.zip" -exec rm -v {} \;
+```
