@@ -13,7 +13,9 @@ For bacterial genomes, we used NCBI Datasets (https://github.com/acyeh-lab/NCBID
 
 We then run Prokka to obtain annotated datasets For example:
 ```
-/fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/Akkermansia_muciniphilia/ncbi_dataset/data/GCF_009731575.1/annotation_output
+cd /fh/fast/hill_g/Albert/Genomes_Proteomes/NCBI_Datasets/Akkermansia_muciniphilia/ncbi_dataset/data/GCF_009731575.1
+
+sbatch -p campus-new -t 1-0 -c 2 /fh/fast/hill_g/Albert/Shell_Scripts/run_prokka.sh ./GCF_009731575.1_ASM973157v1_genomic.fna
 ```
 
 A description of Prokka output can be found here: "https://github.com/acyeh-lab/Prokka"
@@ -30,4 +32,9 @@ This can assist in the search of genes, such as the ```buk``` gene.
 To delete mid-level "ncbi_dataset.zip" files after unzipping:
 ```
 find . -mindepth 2 -maxdepth 2 -type f -name "*.zip" -exec rm -v {} \;
+```
+
+To delete all "slurm" readouts in subdirectories after processing:
+```
+find . -type f -name "*slurm*" -exec rm -v {} \;
 ```
