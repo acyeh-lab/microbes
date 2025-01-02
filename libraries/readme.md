@@ -1,8 +1,8 @@
-## This contains existing microbiome libraries:
+# This contains existing microbiome libraries:
 
 
 
-# Strain Grouping Table for PMID: 34282338 (244,000 peptide antigens)
+## Strain Grouping Table for PMID: 34282338 (244,000 peptide antigens, Nat Med 2021)
 
 | #  | Strain Name                                   | Group                                | Membrane Protein Analysis | NCBI Accession Number               |
 |----|----------------------------------------------|--------------------------------------|----------------------------|-------------------------------------|
