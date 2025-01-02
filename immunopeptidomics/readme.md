@@ -15,4 +15,4 @@ One question is whether during oxidative stress, we see more PTM changes (e.g. o
 
 | PMID                                | Year | Journal | Notes |
 |-------------------------------------|----------|----------|----------|
-| 36555449 | Taconic         |  2022    | Int J Mol Sci.         |
+| 36555449 | 2022         |  Int J Mol Sci.     | Emphasizes Citrullination, Homocitrullination and Acetylation, uses RA as disease model        |
