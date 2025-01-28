@@ -73,5 +73,8 @@ Note, these are 3 separate accession numbers for the same taxa (818) - difficult
 blastdbcmd -db 16S_ribosomal_RNA -entry NR_112944.1 -outfmt "%f" > NR_112944.1.fasta
 ```
 Note that "NR" prefix stands for non-coding RNA sequence used in refSeq annotation.
+```
+grep "Bifidobacterium" species_summary.txt | grep -o "NR_[^ ]*" | paste -sd "," - | sed 's/,/, /g'
+```
 
 
