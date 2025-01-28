@@ -76,5 +76,6 @@ Note that "NR" prefix stands for non-coding RNA sequence used in refSeq annotati
 ```
 grep "Bifidobacterium" species_summary.txt | grep -o "NR_[^ ]*" | paste -sd "," - | sed 's/,/, /g'
 ```
+This returns the list of all "NR_" accession numbers for the genus Bifidobacterium
 
 
