@@ -8,7 +8,7 @@ This document summarizes microbial species and genera associated with either inc
 
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** | **Rationale** | **P8792 brushing** | **buk (gene)** |
 |------------------|------------------|------------------------|------------|-----------|------------|-------|--------|
-| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | GCF_014131755.1, NR_112944.1  (16S) | PMID 36179667 | Y (lower) |
+| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | GCF_014131755.1; 16S: NR_112944.1, NR_112142.1, NR_074277.1| PMID 36179667 | Y (lower) |
 | *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 | GCF_009731575.1 | PMID 27194729 | Y (lower) |
 | *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 | GCF_009734005.1 | PMID 31780560, 22547653 | N | 
 | *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 | GCF_000393015.1 | PMID 31780560, 22547653 | Y (lower) |
