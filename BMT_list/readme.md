@@ -40,8 +40,7 @@ This document summarizes microbial species and genera associated with either inc
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** | **Rationale** | **P8792 brushing** |
 |-----------------|-------------------|----------------------|------------------------|-------------|-------|-------|
 | *Lactobacillus (Lacticaseibacillus)* | *rhamnosus*          | neutral in study  | 47715 | GCF_006151905.1; 16S: NR_113332.1, NR_043408.1 | PMID 28256022 | Y (both) |
-| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | GCF_000014425.1; 16S: NR_041920.1, NR_117573.1, NR_075051.2
- | High in P8792 | Y (both) |
+| *Lactobacillus* | *gasseri*            | Undefined role | 1596, 324831  | GCF_000014425.1; 16S: NR_041920.1, NR_117573.1, NR_075051.2 | High in P8792 | Y (both) |
 | *Escherichia* | *coli*                 | Undefined role (increased BSI)                           | 562 | GCF_000005845.2 (K12); 16S: NR_024570.1, NR_112558.1, NR_114042.1 | PMID 30323331 | Y (both) | 
 | *Klebsiella* | *pneumoniae*           | Undefined role (increased BSI)                           | 573 | GCF_000240185.1; 16S: NR_113240.1, NR_041750.1, NR_114506.1, NR_114507.1, NR_036794.1, NR_037084.1, NR_112009.1, NR_114715.1, NR_119276.1, NR_119278.1, NR_113702.1, NR_117682.1, NR_117683.1, NR_117684.1, NR_117685.1, NR_117686.1 | PMID 30323331 | Y (both) |
 | *Staphylococcus* | *epidermidis*       | Undefined role (not classically GI)                      | 1282 | GCF_006094375.1; 16S: NR_036904.1, NR_113957.1 | PMID 30323331 | Y (both) |
