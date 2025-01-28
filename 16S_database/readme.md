@@ -35,6 +35,7 @@ The **16S_ribosomal_RNA.tar.gz** file from NCBI contains a BLAST database for 16
 These files form a BLAST database that can be queried using BLAST tools. For example:
 
 ```
+ml BLAST+/2.14.0-gompi-2022b 
 blastn -query query.fasta -db 16S_ribosomal_RNA -out results.txt
 ```
 
