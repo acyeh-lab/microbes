@@ -79,4 +79,8 @@ grep "Bifidobacterium" species_summary.txt | grep -o "NR_[^ ]*" | paste -sd "," 
 ```
 This returns the list of all "NR_" accession numbers for the genus Bifidobacterium
 
+## Comprehensive Human Gut Reference
+https://gmrepo.humangut.info/home
+
+Deposited here: /fh/fast/hill_g/Albert/Bacterial_Taxonomy/Human_Gut_Reference
 
