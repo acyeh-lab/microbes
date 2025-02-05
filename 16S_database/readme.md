@@ -40,6 +40,7 @@ blastn -query query.fasta -db 16S_ribosomal_RNA -out results.txt
 ```
 
 ## Find all species listed
+Directory where dataase is stored: /fh/fast/hill_g/Albert/Bacterial_Taxonomy/16S_rRNA_DB
 ```
 blastdbcmd -db 16S_ribosomal_RNA -entry all -outfmt "%a %T %S" > species_summary.txt
 ```
