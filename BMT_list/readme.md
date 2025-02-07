@@ -61,7 +61,7 @@ This document summarizes microbial species and genera associated with either inc
 | **Gene** | **Description** | **Associated Taxonomy ID** | **Rationale** |
 |-----------------|-------------------|---------------------|--------------------------|
 | buk | Butyrate kinase catalyzes ADP + butyryl-phosphate  ⇌ ATP + butyrate | butyrate producers | |
-| but |  butyryl-CoA:acetate CoA-transferase | butyrate producers | |
+| but (family); BCoAT (specific)|  butyryl-CoA:acetate CoA-transferase | butyrate producers | |
 ---
 
 ## Notes
