@@ -26,7 +26,7 @@ This document summarizes microbial species and genera associated with either inc
 
 | **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** |**Rationale** | **P8792 brushing** | **buk (gene)** |
 |-----------------|-------------------|-----------------------|----------|--------------|-------------|-------|-------|
-| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | GCF_001314995.1; 16S: NR_112940.1, NR_115301.1, NR_040865.1, NR_119165.1, NR_116181.1 | PMID 24739972  | Y (both) |
+| *Bacteroides* | *ovatus*               | Increases mucin production                    | 28116 | GCF_001314995.1; 16S: NR_112940.1, NR_115301.1, NR_040865.1, NR_119165.1, NR_116181.1 | PMID 39214085; PMID 30663928  | Y (both) |
 | *Lactobacillus* | *johnsonii*          | Prevents *Enterococcus* domination (uncertain `?`) | 33959 | GCF_014058685.1; 16S: NR_117574.1, NR_025273.1 | PMID 35216600, 22547653 | N | 
 | *Bacteroides* | *fragilis*             | Undefined role                                | 817, 272559 | GCF_000025985.1; 16S; NR_112936.1, NR_112141.1, NR_119164.1, NR_074784.2 | PMID 33554953 | Y (both) |
 | *Faecalibacterium* | *prausnitzii*     | Produces butyrate (studied in colitis)        | 853 | GCF_000154385.1; 16S: NR_028961.1 | PMID 29796620 | Y (lower) |
