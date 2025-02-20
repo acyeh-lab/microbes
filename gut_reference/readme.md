@@ -9,9 +9,10 @@
 - Depoisted here (generated 2/19/25):
 - ```/fh/fast/hill_g/Albert/Bacterial_Taxonomy/Human_Gut_Reference```
 - Run command (after getting command line tools to work - need to create local ~/bin folder as need to move the datasets and dataformat binaries to a directory that is in your PATH, so that you can run them from anywhere without specifying the full path.
-```while read taxid; do
+```
+while read taxid; do
     echo "Downloading genome for Taxon ID: $taxid"
     datasets download genome taxon "$taxid" --dehydrated --include genome --include cds --include seq-report --filename "$taxid.zip"
     unzip -o "$taxid.zip" -d "genomes/$taxid"
-   done < taxon_ids.txt
+done < taxon_ids.txt
 ```
