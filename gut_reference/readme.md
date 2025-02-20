@@ -7,4 +7,4 @@
 ## Download references using NCBI taxon ID
 - Use NCBI Datasets command line tools (CLI): https://www.ncbi.nlm.nih.gov/datasets/docs/v2/command-line-tools/download-and-install/
 - Depoisted here (generated 2/19/25):
-- ```/fh/fast/hill_g/Albert/Genomes_Proteomes/Bacterial_Sequences/genomes/human_gut_ref```
+- ```/fh/fast/hill_g/Albert/Bacterial_Taxonomy/Human_Gut_Reference```
