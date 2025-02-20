@@ -23,3 +23,8 @@ while read taxid; do
     unzip -o "$taxid.zip" -d "genomes/$taxid"
 done < taxon_ids.txt
 ```
+- Move all IDs into the folder "genome". (Make the genome folder first)
+- Then rehydrate all datasets:
+```
+datasets rehydrate --directory genomes/
+```
