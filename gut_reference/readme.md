@@ -27,9 +27,19 @@ source ~/.bashrc
 - Then run the following script to download all of the taxon IDs to the local directory
 ```
 while read taxid; do
+    if [ -d "genomes/$taxid" ]; then
+        echo "Skipping Taxon ID: $taxid (already downloaded)"
+        continue
+    fi
+    
     echo "Downloading genome for Taxon ID: $taxid"
     datasets download genome taxon "$taxid" --dehydrated --include genome --include cds --include seq-report --filename "$taxid.zip"
-    unzip -o "$taxid.zip" -d "genomes/$taxid"
+    
+    if [ -f "$taxid.zip" ]; then
+        unzip -o "$taxid.zip" -d "genomes/$taxid"
+    else
+        echo "Error: Failed to download genome for Taxon ID: $taxid"
+    fi
 done < taxon_ids.txt
 ```
 - Move all IDs into the folder "genome". (Make the genome folder first)
