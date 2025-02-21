@@ -6,6 +6,7 @@
 
 ## Download references using NCBI taxon ID
 - Use NCBI Datasets command line tools (CLI): https://www.ncbi.nlm.nih.gov/datasets/docs/v2/command-line-tools/download-and-install/
+Download datasets, download dataformat, and make them executable:
 ```
 curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets'
 curl -o dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/dataformat'
