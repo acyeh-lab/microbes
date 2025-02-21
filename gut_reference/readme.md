@@ -21,6 +21,8 @@ mkdir -p ~/bin
 mv datasets dataformat ~/bin/
 chmod +x ~/bin/datasets ~/bin/dataformat
 echo $PATH
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
 ```
 - Then run the following script to download all of the taxon IDs to the local directory
 ```
