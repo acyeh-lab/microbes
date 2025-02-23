@@ -6,9 +6,9 @@ This document summarizes microbial species and genera associated with either inc
 
 ## Increase GVHD
 
-| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** | **Rationale** | **P8792 brushing** | **buk (gene)** |
+| **Microbe (Genus)** | **Microbe (Species)** | **Effect** | **Taxonomy ID** | **RefSeq** | **Rationale** | **P8792 brushing** | **Notes** |
 |------------------|------------------|------------------------|------------|-----------|------------|-------|--------|
-| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | GCF_014131755.1; 16S: NR_112944.1, NR_112142.1, NR_074277.1| PMID 36179667 | Y (lower) |
+| *Bacteroides* | *thetaiotaomicron*     | Decreases mucin production                    | 818 | GCF_014131755.1; 16S: NR_112944.1, NR_112142.1, NR_074277.1| PMID 36179667 | Y (lower) | |
 | *Akkermansia* | *muciniphila*          | Decreases mucin production (uncertain `?`)    | 349741, 239935 | GCF_009731575.1; 16S: NR_042817.1, NR_074436.1 | PMID 27194729 | Y (lower) |
 | *Enterococcus* | *faecium* (murine)    | Produces metalloprotease                      | 1352 | GCF_009734005.1; 16S: NR_042054.1, NR_112039.1, NR_114742.1, NR_115764.1, NR_113903.1, NR_113904.1 | PMID 31780560, 22547653 | N | 
 | *Enterococcus* | *faecalis*            | Produces metalloprotease                      | 1351 | GCF_000393015.1; 16S: NR_115765.1, NR_040789.1, NR_114782.1, NR_113901.1, NR_113902.1 | PMID 31780560, 22547653 | Y (lower) |
