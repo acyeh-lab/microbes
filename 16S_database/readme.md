@@ -1,5 +1,6 @@
 # Constructing a 16S rRNA database
-This branch describes how to build a microbial 16S database for blast searching and MSA
+This branch describes how to build a microbial 16S database for blast searching and MSA.
+Note I used this DB below to provide to 10x to design Xenium probes
 
 # Downloading NCBI's Microbial 16S rRNA DB
 NCBI has a project called "Microbial 16S RNA sequences from the RefSeq Targeted Loci project": "https://www.ncbi.nlm.nih.gov/books/NBK62345/table/blast_ftp_site.T.preformatted_refseq_n",  
