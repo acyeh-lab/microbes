@@ -85,3 +85,19 @@ https://gmrepo.humangut.info/home
 
 Deposited here: /fh/fast/hill_g/Albert/Bacterial_Taxonomy/Human_Gut_Reference
 
+## Finding the start/stop site of a particular seqeunce and match into a 16S sequence from taxon ID:
+
+First, extract fasta file of sequence
+```
+ml BLAST+/2.14.0-gompi-2022b 
+blastdbcmd -db 16S_ribosomal_RNA -taxids 853 -outfmt "%f" -out taxid_853.fasta
+```
+
+In BASH:
+```
+QUERY="GGCATCGGGTAGAGGG"
+grep -v "^>" taxid_853.fasta | tr -d '\n' > sequence.txt
+MATCH_START=$(grep -b -o "$QUERY" sequence.txt | cut -d':' -f1)
+MATCH_END=$((MATCH_START + ${#QUERY} - 1))
+echo "Start: $((MATCH_START + 1)), End: $((MATCH_END + 1))"
+```
