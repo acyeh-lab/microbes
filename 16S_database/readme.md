@@ -90,8 +90,10 @@ Deposited here: /fh/fast/hill_g/Albert/Bacterial_Taxonomy/Human_Gut_Reference
 First, extract fasta file of sequence
 ```
 ml BLAST+/2.14.0-gompi-2022b 
-blastdbcmd -db 16S_ribosomal_RNA -taxids 853 -outfmt "%f" -out taxid_853.fasta
+blastdbcmd -db 16S_ribosomal_RNA -taxids 853 -outfmt "%f" -out taxid_853.fasta # If using Taxon ID
+blastdbcmd -db 16S_ribosomal_RNA -entry NR_074436.1 -outfmt "%f" -out NR_074436.1.fasta # IF using GenBank#
 ```
+
 
 In BASH:
 ```
