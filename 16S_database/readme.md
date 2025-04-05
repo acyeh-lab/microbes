@@ -103,3 +103,6 @@ MATCH_START=$(grep -b -o "$QUERY" sequence.txt | cut -d':' -f1)
 MATCH_END=$((MATCH_START + ${#QUERY} - 1))
 echo "Start: $((MATCH_START + 1)), End: $((MATCH_END + 1))"
 ```
+
+## Finding primers for sequencing
+https://www.idtdna.com/calc/analyzer
