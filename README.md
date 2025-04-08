@@ -10,6 +10,7 @@ Each individual folder will contain relevant references for each TCR listed belo
 | Murine        | HH7-2         | QESPRIAAAYTIKGA | E2 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 | 2018 Nature; Xu M et al |
 | Murine        | HH5-1         | GNAYISVLAHYGKNG | E1 epitope, HH_1713       | H. hepaticus                       | H2-IAb        | 29414937 | 2018 Nature; Xu M et al |
 | Murine        | Amuc124       | TLYIGSGAILS     | Amuc_RS03735 (Am3735-1)   | A. muciniphilia                    | H2-IAb        | 31221858 | 2019 Science; Ansaldo E et al |
+| Murine        | BthetaOM      | EEFNLPTTNGGHAT  | BT4295 (541-554)          | B. Thetaiotaomicron                | H2-IAb        | 30737355 | 2019 Sci Immunol; Wegorzewska E et al |
 | Murine        | H1-26, H1-16, H1-27, H2-23, H1-09, H2-13 | YDAFAINMV | Substrate-binding protein (SBP 405-413) | Firmicutes          | H2-IAb        | 37587342 | 2024 Nature; Nagashima K et al |
 | Murine        | H1-24, H1-38, H2-21, H1-19, H2-29, H2-22, H2-20 | YYVGFDANQ | Substrate-binding protein (SBP 76-84) | Firmicutes          | H2-IAb        | 37587342 | 2024 Nature; Nagashima K et al |
 | Murine        | H2-11, H2-30, H1-14 | SDYFTVTPQVLEAVGGKVPATINGK | Tetratricopeptide repeat lipoprotein (TPRL 29-53) | Bacteroides   | H2-IAb        | 37587342 | 2024 Nature; Nagashima K et al |
