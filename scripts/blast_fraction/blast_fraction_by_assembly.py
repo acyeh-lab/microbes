@@ -178,7 +178,7 @@ def main():
     for i, acc in enumerate(accs, 1):
         status = "fail"; msg = ""
         try:
-            if args.skip-download:  # allow manual pre-population of FASTAs
+            if args.skip_download:  # allow manual pre-population of FASTAs
                 fasta = cache_dir / acc / f"{acc}_genomic.fna"
                 if not fasta.exists():
                     raise FileNotFoundError(f"Missing cached FASTA: {fasta}")
@@ -205,3 +205,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
