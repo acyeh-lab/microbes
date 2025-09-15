@@ -1,14 +1,12 @@
-This function returns what fraction of strains an input sequence is found in from "query.fa'. This can be used to find how good a probe coverage is.
-
-## blast_fraction_by_assembly.py
+This function returns what fraction of strains an input sequence is found in from "query.fa'. This can be used to find how good a probe coverage is. The output is named the same as the .fa file, which should contain 1 probe.  To query mutltiple probes, have to submit job with different ".fa' file.
 
 ```
-sbatch blast_fraction_by_assembly.sbatch.sh \
+sbatch blast_fraction_by_assembly.sh \
   --table /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila.csv \
-  --sequence /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/query.fa \
+  --sequence /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/akk_muc1.fa \
   --cache-dir /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila \
   --out /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila/results.csv \
-  --min-pident 90 --min-qcov 80 --max-evalue 1e-5 \
+  --min-pident 100 --min-qcov 100 --max-evalue 1e-5 \
   --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
 ```
 
