@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 # Run blast_fraction_by_assembly.py against pre-downloaded genomes.
-# Usage example:
-#   sbatch -p campus-new -c 12 --mem=24G -t 24:00:00 blast_fraction_by_assembly.sbatch.sh \
-#     --table /path/to/Akkermansia_muciniphila.csv \
-#     --sequence /path/to/query.fa \
-#     --cache-dir /path/to/cache \
-#     --out /path/to/cache/results.csv \
-#     --min-pident 90 --min-qcov 80 --max-evalue 1e-5 \
-#     --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
 #
 #SBATCH --job-name=blast_fraction
 #SBATCH --partition=campus-new
@@ -23,12 +15,12 @@ set -euo pipefail
 TABLE=""
 SEQUENCE=""
 CACHE_DIR="genome_cache"
-OUT="results.csv"
+OUT="results.csv"   # if left as default, we'll auto-name from --sequence
 MIN_PIDENT="90"
 MIN_QCOV="80"
 MAX_EVALUE="1e-5"
 ENV_PREFIX="/home/ayeh/micromamba/envs/microbiome_genomics"
-SCRIPT="/fh/fast/hill_g/Albert/Bacterial_Taxonomy/blast_fraction_by_assembly.py"
+SCRIPT="/fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_fraction_by_assembly.py"
 
 usage() {
   cat <<USAGE
@@ -38,7 +30,7 @@ Required:
 
 Optional:
   --cache-dir DIR        Directory containing <ACC>/<ACC>_genomic.fna (default: $CACHE_DIR)
-  --out PATH             Results CSV (default: $OUT)
+  --out PATH             Results CSV (default: <cache-dir>/<sequence-basename>.csv)
   --min-pident N         % identity threshold (default: $MIN_PIDENT)
   --min-qcov N           % query coverage threshold (default: $MIN_QCOV)
   --max-evalue X         e-value threshold (default: $MAX_EVALUE)
@@ -46,7 +38,7 @@ Optional:
   --script PATH          Path to blast_fraction_by_assembly.py (default: $SCRIPT)
   -h|--help              Show this help
 
-Tip: You can also override Slurm resources at submit time, e.g.
+Tip: You can override Slurm resources at submit time, e.g.
   sbatch -p campus-new -c 16 --mem=32G -t 12:00:00 blast_fraction_by_assembly.sbatch.sh ...
 USAGE
 }
@@ -74,6 +66,14 @@ mkdir -p "$CACHE_DIR"
 
 # required args
 [[ -n "$TABLE" && -n "$SEQUENCE" ]] || { echo "ERROR: --table and --sequence are required"; usage; exit 2; }
+
+# -------- auto-name OUT from --sequence if user didn't override --------
+if [[ "$OUT" == "results.csv" || -z "$OUT" ]]; then
+  seq_base="$(basename "$SEQUENCE")"
+  seq_stem="${seq_base%.*}"             # drop extension (.fa/.fasta/.faa)
+  OUT="${CACHE_DIR%/}/${seq_stem}.csv"
+fi
+mkdir -p "$(dirname "$OUT")"
 
 echo "TABLE      : $TABLE"
 echo "SEQUENCE   : $SEQUENCE"
@@ -113,3 +113,4 @@ command -v makeblastdb >/dev/null 2>&1 || { echo "BLAST+ (makeblastdb) not found
   --max-evalue "$MAX_EVALUE"
 
 echo "Done. Results: $OUT"
+
