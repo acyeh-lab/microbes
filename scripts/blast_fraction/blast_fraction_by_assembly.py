@@ -110,38 +110,96 @@ def ensure_blast_db(fasta: Path, dbtype: str) -> Path:
     run(["makeblastdb","-in",str(fasta),"-dbtype",dbtype,"-out",str(prefix)])
     return prefix
 
+def merge_intervals(ints):
+    """Merge [start,end] intervals (1-based, inclusive)."""
+    if not ints:
+        return []
+    ints = [(min(a,b), max(a,b)) for a,b in ints]
+    ints.sort()
+    merged = []
+    for s, e in ints:
+        if not merged or s > merged[-1][1] + 1:
+            merged.append([s, e])
+        else:
+            merged[-1][1] = max(merged[-1][1], e)
+    return [(s, e) for s, e in merged]
+
 def has_hit(query_fasta: Path, db_prefix: Path, program: str,
             min_pident: float, min_qcov: float, max_evalue: float,
             is_short: bool, threads: int = 1) -> bool:
     """
-    Run BLAST and return True if any HSP passes thresholds.
-    For short DNA probes, use blastn-short and disable masking.
+    True if ANY HSP meets (pident >= min_pident AND qcov >= min_qcov AND evalue <= max_evalue),
+    OR if merged coverage across HSPs that individually meet the identity threshold reaches qcov.
+
+    Notes:
+      - For short DNA probes, use blastn-short and disable masking.
+      - We avoid "averaging identity across HSPs", which could penalize a perfect HSP.
     """
     outfmt = "6 sacc pident length qlen qstart qend sstart send evalue bitscore"
     cmd = [
         program, "-query", str(query_fasta), "-db", str(db_prefix),
         "-outfmt", outfmt, "-evalue", str(max_evalue),
-        "-max_target_seqs", "5", "-num_threads", str(threads)
+        "-max_hsps", "100", "-max_target_seqs", "1000",
+        "-num_threads", str(threads)
     ]
     if is_short and program == "blastn":
         cmd += ["-task", "blastn-short", "-dust", "no", "-soft_masking", "false"]
 
     ok, out, err, _ = try_run(cmd)
-    if not ok:
+    if not ok or not out.strip():
         return False
 
+    # group HSPs by subject
+    by_sacc = {}
     for line in out.strip().splitlines():
         parts = line.split("\t")
         if len(parts) < 10:
             continue
-        _, pident, length, qlen, *_rest, evalue, _bits = parts
+        sacc   = parts[0]
         try:
-            pident = float(pident); length = float(length); qlen = float(qlen); evalue = float(evalue)
+            pident = float(parts[1])
+            length = float(parts[2])
+            qlen   = int(float(parts[3]))
+            qstart = int(float(parts[4]))
+            qend   = int(float(parts[5]))
+            evalue = float(parts[8])
         except ValueError:
             continue
-        qcov = (length/qlen)*100.0 if qlen > 0 else 0.0
-        if pident >= min_pident and qcov >= min_qcov and evalue <= max_evalue:
-            return True
+
+        if qlen <= 0 or evalue > max_evalue:
+            continue
+
+        hsp = {
+            "pident": pident,
+            "length": length,
+            "qlen":   qlen,
+            "qstart": min(qstart, qend),
+            "qend":   max(qstart, qend),
+        }
+        by_sacc.setdefault(sacc, []).append(hsp)
+
+    # evaluate each subject
+    for sacc, hsps in by_sacc.items():
+        if not hsps:
+            continue
+        qlen = hsps[0]["qlen"]
+
+        # 1) Any single-HSP pass?
+        for h in hsps:
+            qcov_h = 100.0 * (h["length"] / qlen)
+            if h["pident"] >= min_pident and qcov_h >= min_qcov:
+                return True
+
+        # 2) Merge coverage across HSPs that individually meet the identity threshold
+        kept = [h for h in hsps if h["pident"] >= min_pident]
+        if kept:
+            intervals = [(h["qstart"], h["qend"]) for h in kept]
+            merged = merge_intervals(intervals)
+            covered = sum(e - s + 1 for s, e in merged)
+            qcov = 100.0 * covered / qlen
+            if qcov >= min_qcov:
+                return True
+
     return False
 
 def write_temp_query_fasta(seq: str, tmp_dir: Path) -> Path:
@@ -216,14 +274,4 @@ def main():
         if i % 5 == 0 or i == len(accs):
             print(f"Progress: {i}/{len(accs)} processed")
 
-    with open(args.out, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=["assembly_accession","status","error"])
-        w.writeheader(); w.writerows(results)
-
-    frac = hits / len(accs)
-    print(f"Done. Hits: {hits}/{len(accs)} (fraction = {frac:.3f})")
-    print(f"Wrote: {args.out}")
-
-if __name__ == "__main__":
-    main()
-
+    with open(args.out, "w",
