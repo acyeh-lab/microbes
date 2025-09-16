@@ -10,6 +10,18 @@ sbatch blast_fraction_by_assembly.sh \
   --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
 ```
 
+To allow for 1 mismatch (permissive) for probes 34-40 bps:
+```
+sbatch blast_fraction_by_assembly.sh \
+  --table /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila.csv \
+  --sequence /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/akk_muc1.fa \
+  --cache-dir /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila \
+  --out /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila/results.csv \
+  --min-pident 97 --min-qcov 100 --max-evalue 1e-5 \
+  --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
+```
+
+
 ## BLAST Filtering Thresholds
 
 These flags control when an alignment **counts as a hit** in the results.  
