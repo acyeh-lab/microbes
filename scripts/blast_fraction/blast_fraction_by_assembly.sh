@@ -15,7 +15,7 @@ set -euo pipefail
 TABLE=""
 SEQUENCE=""
 CACHE_DIR="genome_cache"
-OUT="results.csv"   # if left as default, we'll auto-name from --sequence
+OUT="results.csv"   # if left as default/blank, we auto-name from --sequence + thresholds
 MIN_PIDENT="90"
 MIN_QCOV="80"
 MAX_EVALUE="1e-5"
@@ -30,7 +30,7 @@ Required:
 
 Optional:
   --cache-dir DIR        Directory containing <ACC>/<ACC>_genomic.fna (default: $CACHE_DIR)
-  --out PATH             Results CSV (default: <cache-dir>/<sequence-basename>.csv)
+  --out PATH             Results CSV (default: <cache-dir>/<sequence-stem>_p<minp>_q<minq>.csv)
   --min-pident N         % identity threshold (default: $MIN_PIDENT)
   --min-qcov N           % query coverage threshold (default: $MIN_QCOV)
   --max-evalue X         e-value threshold (default: $MAX_EVALUE)
@@ -67,11 +67,19 @@ mkdir -p "$CACHE_DIR"
 # required args
 [[ -n "$TABLE" && -n "$SEQUENCE" ]] || { echo "ERROR: --table and --sequence are required"; usage; exit 2; }
 
+# helper to format percentages nicely (95.0 -> 95 ; 97.50 -> 97.5)
+fmt_pct() {
+  local x="$1"
+  printf "%s" "$x" | sed -E 's/^([0-9]+)\.0+$/\1/; s/^([0-9]+\.[0-9]*[1-9])0+$/\1/; s/^([0-9]+)\.$/\1/'
+}
+
 # -------- auto-name OUT from --sequence if user didn't override --------
 if [[ "$OUT" == "results.csv" || -z "$OUT" ]]; then
   seq_base="$(basename "$SEQUENCE")"
-  seq_stem="${seq_base%.*}"             # drop extension (.fa/.fasta/.faa)
-  OUT="${CACHE_DIR%/}/${seq_stem}.csv"
+  seq_stem="${seq_base%.*}"  # drop extension (.fa/.fasta/.faa)
+  p_sfx="$(fmt_pct "$MIN_PIDENT")"
+  q_sfx="$(fmt_pct "$MIN_QCOV")"
+  OUT="${CACHE_DIR%/}/${seq_stem}_p${p_sfx}_q${q_sfx}.csv"
 fi
 mkdir -p "$(dirname "$OUT")"
 
