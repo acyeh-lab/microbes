@@ -1,5 +1,7 @@
 This function returns what fraction of strains an input sequence is found in from "query.fa'. This can be used to find how good a probe coverage is. The output is named the same as the .fa file, which should contain 1 probe.  To query mutltiple probes, have to submit job with different ".fa' file.
 
+Note for short probes, set max-evalue to 10; for longer stretches, can do 1e-5.
+
 ```
 sbatch blast_fraction_by_assembly.sh \
   --table /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila.csv \
@@ -18,7 +20,7 @@ sbatch blast_fraction_by_assembly.sh \
   --sequence /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/akk_muc1.fa \
   --cache-dir /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila \
   --out /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila/results.csv \
-  --min-pident 97 --min-qcov 100 --max-evalue 1e-5 \
+  --min-pident 97 --min-qcov 100 --max-evalue 10 \
   --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
 ```
 ```Output: akk_muc1_p95_q100_e10.csv```
