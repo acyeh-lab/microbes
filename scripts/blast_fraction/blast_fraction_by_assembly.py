@@ -78,7 +78,7 @@ def ensure_genome_fasta_for_accession(acc: str, cache_dir: Path) -> Path:
     acc_dir.mkdir(parents=True, exist_ok=True)
     ok, out, err, _ = try_run([
         "datasets","download","genome","accession", acc,
-        "--no-progressbar","--include","genome,genbank"
+        "--no-progressbar","--include","genome"
     ], cwd=acc_dir)
     if not ok:
         raise RuntimeError(f"datasets download failed for {acc}:\n{out}\n{err}")
@@ -111,25 +111,35 @@ def ensure_blast_db(fasta: Path, dbtype: str) -> Path:
     return prefix
 
 def has_hit(query_fasta: Path, db_prefix: Path, program: str,
-            min_pident: float, min_qcov: float, max_evalue: float) -> bool:
+            min_pident: float, min_qcov: float, max_evalue: float,
+            is_short: bool, threads: int = 1) -> bool:
+    """
+    Run BLAST and return True if any HSP passes thresholds.
+    For short DNA probes, use blastn-short and disable masking.
+    """
     outfmt = "6 sacc pident length qlen qstart qend sstart send evalue bitscore"
-    ok, out, err, _ = try_run([
-        program,"-query",str(query_fasta),"-db",str(db_prefix),
-        "-outfmt",outfmt,"-evalue",str(max_evalue),
-        "-max_target_seqs","5","-num_threads",str(os.cpu_count() or 1)
-    ])
+    cmd = [
+        program, "-query", str(query_fasta), "-db", str(db_prefix),
+        "-outfmt", outfmt, "-evalue", str(max_evalue),
+        "-max_target_seqs", "5", "-num_threads", str(threads)
+    ]
+    if is_short and program == "blastn":
+        cmd += ["-task", "blastn-short", "-dust", "no", "-soft_masking", "false"]
+
+    ok, out, err, _ = try_run(cmd)
     if not ok:
         return False
+
     for line in out.strip().splitlines():
         parts = line.split("\t")
-        if len(parts) < 10: 
+        if len(parts) < 10:
             continue
         _, pident, length, qlen, *_rest, evalue, _bits = parts
         try:
             pident = float(pident); length = float(length); qlen = float(qlen); evalue = float(evalue)
         except ValueError:
             continue
-        qcov = (length/qlen)*100.0 if qlen>0 else 0.0
+        qcov = (length/qlen)*100.0 if qlen > 0 else 0.0
         if pident >= min_pident and qcov >= min_qcov and evalue <= max_evalue:
             return True
     return False
@@ -165,6 +175,12 @@ def main():
     program = "blastn" if dna else "tblastn"  # use tblastn for protein vs nucleotide dbs
     dbtype = "nucl"
 
+    # Short-probe heuristic (DNA and length <= 60 nt)
+    seq_len = len(seq.replace("\n", "").replace("\r", ""))
+    is_short = bool(dna and seq_len <= 60)
+    if is_short and float(args.max_evalue) < 1.0:
+        print(f"Note: short query ({seq_len} nt) — consider --max-evalue 10 (currently {args.max_evalue}).")
+
     query_fasta = write_temp_query_fasta(seq, cache_dir / "_tmp")
 
     accs = extract_accessions(table, args.acc_col)
@@ -175,6 +191,8 @@ def main():
     print(f"Found {len(accs)} assembly accessions.")
     results = []
     hits = 0
+    threads = os.cpu_count() or 1
+
     for i, acc in enumerate(accs, 1):
         status = "fail"; msg = ""
         try:
@@ -184,13 +202,16 @@ def main():
                     raise FileNotFoundError(f"Missing cached FASTA: {fasta}")
             else:
                 fasta = ensure_genome_fasta_for_accession(acc, cache_dir)
+
             db_prefix = ensure_blast_db(fasta, dbtype)
             hit = has_hit(query_fasta, db_prefix, program,
-                          args.min_pident, args.min_qcov, args.max_evalue)
+                          args.min_pident, args.min_qcov, args.max_evalue,
+                          is_short=is_short, threads=threads)
             status = "hit" if hit else "no_hit"
             hits += int(hit)
         except Exception as e:
             status = "error"; msg = str(e)[:500]
+
         results.append({"assembly_accession": acc, "status": status, "error": msg})
         if i % 5 == 0 or i == len(accs):
             print(f"Progress: {i}/{len(accs)} processed")
