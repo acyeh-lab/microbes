@@ -30,7 +30,7 @@ Required:
 
 Optional:
   --cache-dir DIR        Directory containing <ACC>/<ACC>_genomic.fna (default: $CACHE_DIR)
-  --out PATH             Results CSV (default: <cache-dir>/<sequence-stem>_p<minp>_q<minq>.csv)
+  --out PATH             Results CSV (default: <cache-dir>/<sequence-stem>_p<minp>_q<minq>_e<evalue>.csv)
   --min-pident N         % identity threshold (default: $MIN_PIDENT)
   --min-qcov N           % query coverage threshold (default: $MIN_QCOV)
   --max-evalue X         e-value threshold (default: $MAX_EVALUE)
@@ -73,13 +73,21 @@ fmt_pct() {
   printf "%s" "$x" | sed -E 's/^([0-9]+)\.0+$/\1/; s/^([0-9]+\.[0-9]*[1-9])0+$/\1/; s/^([0-9]+)\.$/\1/'
 }
 
+# helper to format evalue suffix: "10" -> "10", "1E-5" -> "1e-5", "0.001" -> "0.001"
+fmt_eval() {
+  local x
+  x="$(printf "%s" "$1" | tr 'A-Z' 'a-z' | sed -E 's/\+//g; s/^([0-9]+)\.0+$/\1/; s/^([0-9]+\.[0-9]*[1-9])0+$/\1/; s/^([0-9]+)\.$/\1/')"
+  printf "%s" "$x"
+}
+
 # -------- auto-name OUT from --sequence if user didn't override --------
 if [[ "$OUT" == "results.csv" || -z "$OUT" ]]; then
   seq_base="$(basename "$SEQUENCE")"
   seq_stem="${seq_base%.*}"  # drop extension (.fa/.fasta/.faa)
   p_sfx="$(fmt_pct "$MIN_PIDENT")"
   q_sfx="$(fmt_pct "$MIN_QCOV")"
-  OUT="${CACHE_DIR%/}/${seq_stem}_p${p_sfx}_q${q_sfx}.csv"
+  e_sfx="$(fmt_eval "$MAX_EVALUE")"
+  OUT="${CACHE_DIR%/}/${seq_stem}_p${p_sfx}_q${q_sfx}_e${e_sfx}.csv"
 fi
 mkdir -p "$(dirname "$OUT")"
 
@@ -121,4 +129,5 @@ command -v makeblastdb >/dev/null 2>&1 || { echo "BLAST+ (makeblastdb) not found
   --max-evalue "$MAX_EVALUE"
 
 echo "Done. Results: $OUT"
+
 
