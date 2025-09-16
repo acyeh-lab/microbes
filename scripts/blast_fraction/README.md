@@ -6,9 +6,10 @@ sbatch blast_fraction_by_assembly.sh \
   --sequence /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/akk_muc1.fa \
   --cache-dir /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila \
   --out /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila/results.csv \
-  --min-pident 100 --min-qcov 100 --max-evalue 1e-5 \
+  --min-pident 100 --min-qcov 100 --max-evalue 10 \
   --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
 ```
+```Output: akk_muc1_p100_q100_e10.csv```
 
 To allow for 1 mismatch (permissive) for probes 34-40 bps:
 ```
@@ -20,7 +21,7 @@ sbatch blast_fraction_by_assembly.sh \
   --min-pident 97 --min-qcov 100 --max-evalue 1e-5 \
   --env-prefix /home/ayeh/micromamba/envs/microbiome_genomics
 ```
-
+```Output: akk_muc1_p95_q100_e10.csv```
 
 ## BLAST Filtering Thresholds
 
