@@ -6,5 +6,5 @@
 4) Then upload data into Cirro after going into the genomes and proteomes folder: ```CIRRO_BASE_URL=fredhutch.cirro.bio cirro upload -i```
 5) After done uploaded, click on the genome dataset and run "Build Pangenome".
 6) Now run "find-conserved-pangenome markers" after building the pangenome:
-7) git clone https://github.com/FredHutch/find-conserved-pangenome-markers
+7) ```git clone https://github.com/FredHutch/find-conserved-pangenome-markers```
 8) Load the uv module then type ```bash edit.sh```
