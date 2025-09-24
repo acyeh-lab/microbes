@@ -1,5 +1,8 @@
 The script "predownload_assemblies.py" script downloads all the GCF/GCA assemblies in a given file (we use a search from bv-brc for Akkermansia as as example).
 
+The script "download_ncbi_datasets.py" script downloads all complete, annotated genomes, proteoms, and gff3 files for a given organism
+
+
 ## Example run of Akkermansia genomes:
 
 ```
