@@ -14,13 +14,11 @@ To download off of command line, activate environment of interest, and install n
 ```install -c conda-forge ncbi-datasets-cli``` for python interface.  
 
 Otherwise, to install binaries:
-```
-curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/mac/datasets'
+```curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/mac/datasets'
 curl -o dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/mac/dataformat'
 chmod +x datasets dataformat
 sudo mv datasets /usr/local/bin/
 sudo mv dataformat /usr/local/bin/
 datasets version
-dataformat version
-```
+dataformat version```
 
