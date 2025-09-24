@@ -17,8 +17,9 @@ Otherwise, to install binaries:
 ```curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/mac/datasets'
 curl -o dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/mac/dataformat'
 chmod +x datasets dataformat
-sudo mv datasets /usr/local/bin/
-sudo mv dataformat /usr/local/bin/
+mv datasets /usr/local/bin/
+mv dataformat /usr/local/bin/
+## /usr/local/bin/ is part of your system’s default $PATH environment variable, which is a colon-separated list of directories that your shell searches to find executables.
 datasets version
 dataformat version```
 
