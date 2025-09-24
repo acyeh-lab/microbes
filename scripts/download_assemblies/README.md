@@ -50,7 +50,9 @@ Note that gbff may contain more reliable than gtf for 16S rRNA extraction.
 ## Extracting Genomes, Proteomes, and 16S
 Run script:
 ```sbatch unpack_single_organism_16S.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila```
+
 to also parse 16S or
+
 ```sbatch unpack_single_organism.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila```
 
 
