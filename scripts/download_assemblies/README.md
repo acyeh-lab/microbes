@@ -1,4 +1,4 @@
-This script downloads all the GCF/GCA assemblies in a given file (we use a search from bv-brc for Akkermansia as as example).
+The script " script downloads all the GCF/GCA assemblies in a given file (we use a search from bv-brc for Akkermansia as as example).
 
 ## Example run of Akkermansia genomes:
 
