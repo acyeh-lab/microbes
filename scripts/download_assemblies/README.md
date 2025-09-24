@@ -30,8 +30,9 @@ Then to install genomes from command line (https://www.ncbi.nlm.nih.gov/datasets
 ```datasets download genome taxon human --reference --include genome,rna,cds,protein,gtf```
 For example, to download all e.coli genomes, proteoms, and gtf files that are annotated and with complete assembly:
 
-datasets download genome taxon "escherichia coli" --annotated --assembly-level complete --reference --include genome,rna,cds,protein,gtf
-datasets download genome taxon "akkermansia muciniphila" --annotated --assembly-level complete --reference --include genome,protein,gtf
+```datasets download genome taxon "akkermansia muciniphila" --annotated --assembly-level complete --include genome,protein,gtf,gbff```
+
+## Note that gbff may contain more reliable than gtf for 16S rRNA extraction.
 
 
 
