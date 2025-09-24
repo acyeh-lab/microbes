@@ -9,6 +9,7 @@
   ml cirro
   CIRRO_BASE_URL=fredhutch.cirro.bio cirro upload -i
   ```
+  If in the directory, choose "." for location.
 6) After done uploaded, click on the genome dataset and run "Build Pangenome".
 7) Now run "find-conserved-pangenome markers" after building the pangenome:
 8) ```git clone https://github.com/FredHutch/find-conserved-pangenome-markers```
