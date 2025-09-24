@@ -20,6 +20,7 @@ sbatch download_ncbi_dataset.sh \
   /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila
 ```
 
+### For manual download without using scripts
 To download off of command line, activate environment of interest, and install ncbi-datasets-cli:
 ```install -c conda-forge ncbi-datasets-cli``` for python interface.  
 
@@ -33,8 +34,7 @@ mv dataformat /usr/local/bin/
 datasets version
 dataformat version
 ```
-
-## /usr/local/bin/ is part of your system’s default $PATH environment variable, which is a colon-separated list of directories that your shell searches to find executables.
+**Note that /usr/local/bin/ is part of your system’s default $PATH environment variable, which is a colon-separated list of directories that your shell searches to find executables.
 
 Then to install genomes from command line (https://www.ncbi.nlm.nih.gov/datasets/docs/v2/how-tos/genomes/download-genome/).  Examples below with parameters:
 ```datasets download genome taxon human --assembly-level complete```
