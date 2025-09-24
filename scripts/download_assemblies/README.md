@@ -15,7 +15,9 @@ sbatch predownload_assemblies.sh \
 ```
 ### If downloading directly from NCBI using command line input for species:
 ```
-sbatch download_ncbi_dataset.sh "akkermansia muciniphila" /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila
+sbatch download_ncbi_dataset.sh \
+  "akkermansia muciniphila" \
+  /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila
 ```
 
 To download off of command line, activate environment of interest, and install ncbi-datasets-cli:
