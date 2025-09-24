@@ -7,4 +7,4 @@
 5) After done uploaded, click on the genome dataset and run "Build Pangenome".
 6) Now run "find-conserved-pangenome markers" after building the pangenome:
 7) ```git clone https://github.com/FredHutch/find-conserved-pangenome-markers```
-8) Load the uv module then type ```bash edit.sh```
+8) Load the uv module then type ```bash edit.sh``` OR type in ```uvx marimo edit app.py```
