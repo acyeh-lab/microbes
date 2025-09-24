@@ -2,7 +2,7 @@
 
 1) Download from NCBI genome browser (https://www.ncbi.nlm.nih.gov/datasets/genome/)
 2) Filter out to only include genomes that are annotated and have complete assembly.
-3) Run ```python3 unpack_ncbi_dataset.py``` which unpacks the genomes and proteomes
+3) Run ```python3 unpack_ncbi_dataset.py``` which unpacks the genomes and proteomes in the directory that contains "ncbi_dataset" download.  Or can run shell script "unpack_ncbi_dataset.sh"
 4) Then upload data into Cirro after going into the genomes and proteomes folder: ```CIRRO_BASE_URL=fredhutch.cirro.bio cirro upload -i```
 5) After done uploaded, click on the genome dataset and run "Build Pangenome".
 6) Now run "find-conserved-pangenome markers" after building the pangenome:
