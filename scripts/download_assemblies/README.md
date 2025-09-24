@@ -31,6 +31,7 @@ mv datasets /usr/local/bin/
 mv dataformat /usr/local/bin/
 datasets version
 dataformat version```
+
 ## /usr/local/bin/ is part of your system’s default $PATH environment variable, which is a colon-separated list of directories that your shell searches to find executables.
 
 Then to install genomes from command line (https://www.ncbi.nlm.nih.gov/datasets/docs/v2/how-tos/genomes/download-genome/).  Examples below with parameters:
