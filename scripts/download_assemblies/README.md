@@ -5,12 +5,17 @@ The script "download_ncbi_datasets.py" script downloads all complete, annotated 
 
 ## Example run of Akkermansia genomes:
 
+### If using a .csv file of entries
 ```
 sbatch predownload_assemblies.sh \
   /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila.csv\
   /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila\
   12 \
   /fh/fast/hill_g/Albert/Collaboration-Microbiome/blast_results/Akkermansia_muciniphila/manifest.csv
+```
+### If downloading directly from NCBI using command line input for species:
+```
+sbatch download_ncbi_dataset.sh "akkermansia muciniphila" /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila
 ```
 
 To download off of command line, activate environment of interest, and install ncbi-datasets-cli:
