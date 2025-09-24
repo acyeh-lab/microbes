@@ -1,6 +1,6 @@
 The script "predownload_assemblies.py" script downloads all the GCF/GCA assemblies in a given file (we use a search from bv-brc for Akkermansia as as example).
 
-The script "download_ncbi_datasets.py" script downloads all complete, annotated genomes, proteoms, and gff3 files for a given organism
+The script "download_ncbi_datasets.py" script downloads all complete, annotated genomes, proteoms, and gff3 files for a given organism. The gff3 download enables 16S rRNA extraction.
 
 
 ## Example run of Akkermansia genomes:
@@ -41,9 +41,13 @@ Then to install genomes from command line (https://www.ncbi.nlm.nih.gov/datasets
 For example, to download all e.coli genomes, proteoms, and gtf files that are annotated and with complete assembly:
 
 ```datasets download genome taxon "akkermansia muciniphila" --annotated --assembly-level complete --include genome,protein,gtf,gbff```
+Note that gbff may contain more reliable than gtf for 16S rRNA extraction.
 
-## Note that gbff may contain more reliable than gtf for 16S rRNA extraction.
 
-
+## Extracting Genomes, Proteomes, and 16S
+Run script:
+```sbatch unpack_single_organism_16S.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila```
+to also parse 16S or
+```sbatch unpack_single_organism.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila```
 
 
