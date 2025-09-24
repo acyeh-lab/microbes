@@ -4,7 +4,10 @@ import os
 import zipfile
 import sys
 
+
 def download_dataset(organism, outdir):
+    import shutil
+
     os.makedirs(outdir, exist_ok=True)
 
     print(f"Downloading: {organism}")
@@ -31,6 +34,26 @@ def download_dataset(organism, outdir):
     except zipfile.BadZipFile:
         print(f"Failed to unzip {zip_path} — file may be corrupt.")
         sys.exit(1)
+
+    # Generate data_summary.tsv
+    print("Generating data_summary.tsv...")
+    summary_path = os.path.join(outdir, "ncbi_dataset", "data", "data_summary.tsv")
+
+    try:
+        result = subprocess.run([
+            "dataformat", "tsv", "genome",
+            "--package", zip_path,
+            "--fields", "organism-name,organism-common-name,organism-infraspecific-strain,organism-tax-id,assminfo-name,accession,source_database,annotinfo-name,assminfo-level,assmstats-contig-n50,assmstats-total-sequence-len,assminfo-biosample-submission-date,annotinfo-featcount-gene-total,assminfo-bioproject,assminfo-biosample-accession"
+        ], capture_output=True, check=True, text=True)
+
+        with open(summary_path, "w") as f:
+            f.write(result.stdout)
+        print(f"Saved data_summary.tsv to {summary_path}")
+
+    except subprocess.CalledProcessError as e:
+        print("Failed to generate data_summary.tsv")
+        print(e.stderr)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download NCBI genome data for a given organism.")
