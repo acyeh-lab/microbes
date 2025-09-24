@@ -23,3 +23,16 @@ datasets version
 dataformat version```
 ## /usr/local/bin/ is part of your system’s default $PATH environment variable, which is a colon-separated list of directories that your shell searches to find executables.
 
+Then to install genomes from command line (https://www.ncbi.nlm.nih.gov/datasets/docs/v2/how-tos/genomes/download-genome/).  Examples below with parameters:
+```datasets download genome taxon human --assembly-level complete```
+```datasets download genome taxon human --annotated```
+```datasets download genome taxon human --reference```
+```datasets download genome taxon human --reference --include genome,rna,cds,protein,gtf```
+For example, to download all e.coli genomes, proteoms, and gtf files that are annotated and with complete assembly:
+
+datasets download genome taxon "escherichia coli" --annotated --assembly-level complete --reference --include genome,rna,cds,protein,gtf
+datasets download genome taxon "akkermansia muciniphila" --annotated --assembly-level complete --reference --include genome,protein,gtf
+
+
+
+
