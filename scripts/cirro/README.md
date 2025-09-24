@@ -3,7 +3,7 @@
 1) Download from NCBI genome browser (https://www.ncbi.nlm.nih.gov/datasets/genome/)
 2) Filter out to only include genomes that are annotated and have complete assembly.
 3) Run ```python3 unpack_ncbi_dataset.py``` or ```python3 unpack_ncbi_dataset_16S.py``` which unpacks the genomes and proteomes +/- 16S rRNA in the directory that contains "ncbi_dataset" download.  Or can run shell script "unpack_ncbi_dataset_16S.sh" (I modified this to run from shell):
-  ```sbatch unpack_single_organism.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Collinsella_aerofaciens``` 
+  ```sbatch unpack_single_organism_16S.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Collinsella_aerofaciens``` 
 5) Then upload data into Cirro after going into the genomes and proteomes folder: ```CIRRO_BASE_URL=fredhutch.cirro.bio cirro upload -i```
 6) After done uploaded, click on the genome dataset and run "Build Pangenome".
 7) Now run "find-conserved-pangenome markers" after building the pangenome:
