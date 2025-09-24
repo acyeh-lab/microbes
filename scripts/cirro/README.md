@@ -4,7 +4,11 @@
 2) Filter out to only include genomes that are annotated and have complete assembly.
 3) Run ```python3 unpack_ncbi_dataset.py``` or ```python3 unpack_ncbi_dataset_16S.py``` which unpacks the genomes and proteomes +/- 16S rRNA in the directory that contains "ncbi_dataset" download.  Or can run shell script "unpack_ncbi_dataset_16S.sh" (I modified this to run from shell):
   ```sbatch unpack_single_organism_16S.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Collinsella_aerofaciens``` 
-5) Then upload data into Cirro after going into the genomes and proteomes folder: ```CIRRO_BASE_URL=fredhutch.cirro.bio cirro upload -i```
+5) Then upload data into Cirro after going into the genomes and proteomes folder:
+  ```
+  ml cirro
+  CIRRO_BASE_URL=fredhutch.cirro.bio cirro upload -i
+  ```
 6) After done uploaded, click on the genome dataset and run "Build Pangenome".
 7) Now run "find-conserved-pangenome markers" after building the pangenome:
 8) ```git clone https://github.com/FredHutch/find-conserved-pangenome-markers```
