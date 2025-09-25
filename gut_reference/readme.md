@@ -1,3 +1,11 @@
+## Upated method of extracting reference genomes.
+- Visit "https://github.com/acyeh-lab/microbes/tree/main/scripts/download_assemblies"
+- Use the "human_gut_reference_database.csv" list as below.
+- First download all taxon ID reference databases (--reference flag).  If no reference flag, download assembles with "complete" genomes available.
+- This gives us a database list of 2266 organisms.
+
+
+## Below is old strategy
 ## Human gut reference database
 - Compiled from: https://gmrepo.humangut.info/home
 - Deposited here (generated 2/3/25): ```/fh/fast/hill_g/Albert/Bacterial_Taxonomy/Human_Gut_Reference/GMREPO_relative_abundance_of_all_species_genus_in_all_phenotypes_summary.tsv```
