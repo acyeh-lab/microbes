@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import subprocess
 import os
@@ -5,7 +7,7 @@ import zipfile
 import sys
 
 
-def download_dataset(organism, outdir):
+def download_dataset(organism, outdir, reference=False):
     import shutil
 
     os.makedirs(outdir, exist_ok=True)
@@ -13,16 +15,26 @@ def download_dataset(organism, outdir):
     print(f"Downloading: {organism}")
     zip_path = os.path.join(outdir, "ncbi_dataset.zip")
 
+    # Build the datasets command
+    command = [
+        "datasets", "download", "genome", "taxon", organism,
+        "--annotated",
+        "--assembly-level", "complete",
+        "--include", "genome,protein,gff3",
+        "--filename", zip_path
+    ]
+
+    if reference:
+        command.append("--reference")
+
+    # Run download
     try:
-        subprocess.run([
-            "datasets", "download", "genome", "taxon", organism,
-            "--annotated",
-            "--assembly-level", "complete",
-            "--include", "genome,protein,gff3",
-            "--filename", zip_path
-        ], check=True)
-    except subprocess.CalledProcessError:
-        print(f"Failed to download data for: {organism}")
+        subprocess.run(command, check=True)
+    except subprocess.CalledProcessError as e:
+        if reference:
+            print(f"[INFO] No reference genome found for: {organism}. Try running without '--reference'.")
+        else:
+            print(f"Failed to download data for: {organism}")
         sys.exit(1)
 
     # Unzip
@@ -59,7 +71,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download NCBI genome data for a given organism.")
     parser.add_argument("--organism", required=True, help="Scientific name of the organism (in quotes)")
     parser.add_argument("--outdir", required=True, help="Directory to save the downloaded and unzipped data")
+    parser.add_argument("--reference", action="store_true", help="Only download reference genomes (optional)")
     args = parser.parse_args()
 
-    download_dataset(args.organism, args.outdir)
+    download_dataset(args.organism, args.outdir, args.reference)
 
