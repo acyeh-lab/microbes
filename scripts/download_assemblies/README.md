@@ -47,12 +47,14 @@ For example, to download all e.coli genomes, proteoms, and gtf files that are an
 Note that gbff may contain more reliable than gtf for 16S rRNA extraction.
 
 
-## Extracting Genomes, Proteomes, and 16S
+## Extracting Genomes, Proteomes, 16S/23S rRNA
 Run script:
 ```
 sbatch unpack_single_organism_16S.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila
 ```
-to also parse 16S or
+to also parse 16S and 23S rRNA.
+
+Otherwise run:
 ```
 sbatch unpack_single_organism.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila
 ```
