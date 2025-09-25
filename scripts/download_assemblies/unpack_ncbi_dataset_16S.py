@@ -59,26 +59,33 @@ def unpack_assembly(assembly: dict, genomic_manifest: list, protein_manifest: li
             gff_file = Path(dest_path)
 
     if gff_file and fna_file:
-        extract_16s_rRNA_inline(gff_file, fna_file, accession)
+        extract_rRNA_inline(gff_file, fna_file, accession)
     else:
         print(f"Missing GFF or FASTA for {accession}, skipping 16S")
 
-
-def extract_16s_rRNA_inline(gff_path: Path, fna_path: Path, accession: str):
+def extract_rRNA_inline(gff_path: Path, fna_path: Path, accession: str):
     if not gff_path.exists() or not fna_path.exists():
-        print(f"Missing file for {accession}, skipping 16S")
+        print(f"Missing file for {accession}, skipping rRNA")
         return
 
     seqs = SeqIO.to_dict(SeqIO.parse(open(fna_path), "fasta"))
 
-    output_dir = Path("16S_rRNA")
-    output_dir.mkdir(exist_ok=True)
-    output_path = output_dir / f"{accession}.fasta"
+    output_dirs = {
+        "16S": Path("16S_rRNA"),
+        "23S": Path("23S_rRNA")
+    }
+    for path in output_dirs.values():
+        path.mkdir(exist_ok=True)
 
-    count = 0
-    with open(gff_path) as gff_handle, open(output_path, "w") as out_f:
+    handles = {
+        "16S": open(output_dirs["16S"] / f"{accession}.fasta", "w"),
+        "23S": open(output_dirs["23S"] / f"{accession}.fasta", "w")
+    }
+
+    found = {"16S": 0, "23S": 0}
+    with open(gff_path) as gff_handle:
         for line in gff_handle:
-            if '\trRNA\t' in line and '16S' in line:
+            if '\trRNA\t' in line and ('16S' in line or '23S' in line):
                 parts = line.strip().split('\t')
                 if len(parts) < 9:
                     continue
@@ -88,18 +95,29 @@ def extract_16s_rRNA_inline(gff_path: Path, fna_path: Path, accession: str):
                 end = int(end)
                 seq_record = seqs.get(seq_id)
 
-                if seq_record:
+                rna_type = None
+                if "16S" in attributes:
+                    rna_type = "16S"
+                elif "23S" in attributes:
+                    rna_type = "23S"
+
+                if rna_type and seq_record:
                     subseq = seq_record.seq[start:end]
                     if strand == '-':
                         subseq = subseq.reverse_complement()
 
-                    count += 1
-                    out_f.write(f">{accession}|{seq_id}:{start+1}-{end}({strand})|16S_rRNA_{count}\n{subseq}\n")
+                    found[rna_type] += 1
+                    handles[rna_type].write(
+                        f">{accession}|{seq_id}:{start+1}-{end}({strand})|{rna_type}_rRNA_{found[rna_type]}\n{subseq}\n"
+                    )
 
-    if count == 0:
-        print(f"No 16S rRNA found for {accession}")
+    for f in handles.values():
+        f.close()
+
+    if sum(found.values()) == 0:
+        print(f"No 16S or 23S rRNA found for {accession}")
     else:
-        print(f"Found {count} 16S rRNA entries for {accession}")
+        print(f"Found {found['16S']}x 16S and {found['23S']}x 23S rRNA entries for {accession}")
 
 def copy_file(file_in: str, file_out: str, compress: bool = True):
     file_out = Path(file_out)
