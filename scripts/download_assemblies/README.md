@@ -27,7 +27,10 @@ sbatch download_ncbi_dataset.sh \
   /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Akkermansia_muciniphila \
   TRUE
 ```
-
+### If downloading reference dataset
+```
+sbatch download_ref_dataset.sh /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Ref_gut_human/human_gut_reference_database.csv /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Ref_gut_human/db/
+```
 
 ### For manual download without using scripts
 To download off of command line, activate environment of interest, and install ncbi-datasets-cli:
