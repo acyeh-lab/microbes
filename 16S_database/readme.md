@@ -1,8 +1,9 @@
 # Current approach (as of 10/28/25)
 ## Workflow:
-download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset_16S.py (sh) (This unpacks both 16S and 23S rRNA)
-
-download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset.py (sh)
+- Get data from https://www.ncbi.nlm.nih.gov/datasets/genome/ (make sure to select from filters "complete" assemblies and "annotated genomes".
+- When downloading, make sure to check off the following boxes: "Genome sequences (FASTA)" (default), "Annotation features (GFF)", and "Protein (FASTA)".  Note that "Assmbly data report (JSONL)" should be included.  All of these components are needed to run the following downstream scripts.
+- download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset_16S.py (sh) (This unpacks both 16S and 23S rRNA)
+- download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset.py (sh)
 
 -------------------------------------------------------------
 # Approach below is outdated
