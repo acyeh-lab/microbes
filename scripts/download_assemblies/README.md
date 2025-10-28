@@ -2,7 +2,7 @@ The script "predownload_assemblies.py" script downloads all the GCF/GCA assembli
 
 The script "download_ncbi_datasets.py" script downloads all complete, annotated genomes, proteoms, and gff3 files for a given organism. The gff3 download enables 16S rRNA extraction.
 
-The script "download_ref_datasets.py" downloads reference databases for all genes in a given file, if it exists.
+The script "download_ref_datasets.py" downloads reference databases for all genes in a given file, if it exists. I used this to construct human gut refrence genome.
 
 ## Example run of Akkermansia genomes:
 
