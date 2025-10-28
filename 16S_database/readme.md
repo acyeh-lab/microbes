@@ -1,4 +1,10 @@
-# Constructing a 16S rRNA database
+# Current approach (as of 10/28/25)
+## Workflow:
+download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset_16S.py (sh)
+
+-------------------------------------------------------------
+# Approach below is outdated
+# Constructing a 16S rRNA database 
 This branch describes how to build a microbial 16S database for blast searching and MSA.
 Note I used this DB below to provide to 10x to design Xenium probes
 
