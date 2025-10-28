@@ -1,6 +1,7 @@
 # Current approach (as of 10/28/25)
 ## Workflow:
 download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset_16S.py (sh) (This unpacks both 16S and 23S rRNA)
+
 download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset.py (sh)
 
 -------------------------------------------------------------
