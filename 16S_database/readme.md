@@ -15,6 +15,7 @@
  
 ### Run 11/12/25 with 10x (Panel 9XQADF)
 - I ran this pipeline with 6 bacterial:
+
 | **Bacteria**      | **Pan-genome threshold** | **Notes**                                                            |
 |-------------------|------------------------------|-------------------------------------------------------------|
 | `A. muciniphila`  | `stringent100`        | .                                                                       |
