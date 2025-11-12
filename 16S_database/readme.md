@@ -10,6 +10,9 @@
 - To find shared regions (e.g. for 16s) for a group of strains: can used script "find_shared_regions.py".  First load the appropriate environment module though. Note that this function allows you to specify sequence length (minimum 'k'), minimum fraction of overlap (e.g. 1.0 for full match across ALL strains), and a reference file (ideally use type reference strain per NCBI).  We did it this way rather than having no reference file to make labeling easier (can specific start/stop), and we also tried using a randon reference file which made no difference).
   - "python find_shared_regions.py  /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Streptococcus_salivarius/16S_rRNA/   -k 35   --min-fraction 1.0   --ref-file GCF_000253315.1.fasta   -o /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Streptococcus_salivarius/16S_rRNA/S_salivarius16S_ref.tsv"
 
+- Next, to convert a file of gene fragments into fasta format for 10x to read, run the following command in the appropriate directly, which will label each fragment serially:
+  - "awk -F',' 'NR>1 && NF>=2 { c[$1]++; printf(">E_coli|%s|fragment%d\n%s\n", $1, c[$1], $2) }' e_coli.csv > E_coli_fragments.fasta.txt"
+
 -------------------------------------------------------------
 # Approach below is outdated
 # Constructing a 16S rRNA database 
