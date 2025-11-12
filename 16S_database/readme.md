@@ -15,14 +15,14 @@
  
 ### Run 11/12/25 with 10x (Panel 9XQADF)
 - I ran this pipeline with 6 bacterial:
-| **Bacteria**      | **Pan Gig-genome threshold** | **Notes**                                                                 |
-|------------------|------------------------------|---------------------------------------------------------------------------------|
-| `A. muciniphila`       | `stringent100`      | .                   |
-| `B. fragilis`          | `stringent100`      | .           |
-| `C. aerofaciens`       | `stringent100`      | .               |
-| `E. coli`              | `stringent99`       | did not have any hits for stringent100 (probably incorrectly annotated genomes).                               |
-| `E. faecalis`          | `stringent100 and 99`      | did stringent 99 as not many genes for stringent 100.            |
-| `S. salivarius`        | `stringent100`      | .            |
+| **Bacteria**      | **Pan-genome threshold** | **Notes**                                                            |
+|-------------------|------------------------------|-------------------------------------------------------------|
+| `A. muciniphila`  | `stringent100`        | .                                                                       |
+| `B. fragilis`     | `stringent100`        | .                                                                       |
+| `C. aerofaciens`  | `stringent100`        | .                                                                       |
+| `E. coli`         | `stringent99`         | no hits for stringent100 (probably incorrectly annotated genomes).      |
+| `E. faecalis`     | `stringent100 and 99` | did stringent 99 as not many genes for stringent 100.                   |
+| `S. salivarius`   | `stringent100`        | .                                                                       |
 -------------------------------------------------------------
 # Approach below is outdated
 # Constructing a 16S rRNA database 
