@@ -11,7 +11,7 @@
   - "python find_shared_regions.py  /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Streptococcus_salivarius/16S_rRNA/   -k 35   --min-fraction 1.0   --ref-file GCF_000253315.1.fasta   -o /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Streptococcus_salivarius/16S_rRNA/S_salivarius16S_ref.tsv"
 
 - Next, to convert a file of gene fragments into fasta format for 10x to read, run the following command in the appropriate directly, which will label each fragment serially:
-  - "awk -F',' 'NR>1 && NF>=2 { c[$1]++; printf(">E_coli|%s|fragment%d\n%s\n", $1, c[$1], $2) }' e_coli.csv > E_coli_fragments.fasta.txt"
+  - "awk -F',' 'NR>1 && NF>=2 { c[$1]++; printf(">E_coli|%s|fragment%d\n%s\n", $1, c[$1], $2) }' e_coli.csv > E_coli_fragments.fasta.txt" (replace .csv and .txt name")
 
 -------------------------------------------------------------
 # Approach below is outdated
