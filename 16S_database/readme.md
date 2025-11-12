@@ -7,6 +7,8 @@
 - For mass download (point to output folder, with input argument including organisim=$1, output directory=$2, and refrence=$3 if want reference genome):
   - download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset_16S.py (sh) (This unpacks both 16S and 23S rRNA)
   - download_ncbi_datasets.py (sh) -> unpack_ncbi_dataset.py (sh)
+- To find shared regions (e.g. for 16s) for a group of strains: can used script "find_shared_regions.py".  First load the appropriate environment module though. Note that this function allows you to specify sequence length (minimum 'k'), minimum fraction of overlap (e.g. 1.0 for full match across ALL strains), and a reference file (ideally use type reference strain per NCBI).  We did it this way rather than having no reference file to make labeling easier (can specific start/stop), and we also tried using a randon reference file which made no difference).
+  - "python find_shared_regions.py  /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Streptococcus_salivarius/16S_rRNA/   -k 35   --min-fraction 1.0   --ref-file GCF_000253315.1.fasta   -o /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Streptococcus_salivarius/16S_rRNA/S_salivarius16S_ref.tsv"
 
 -------------------------------------------------------------
 # Approach below is outdated
