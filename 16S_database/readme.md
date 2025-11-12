@@ -12,7 +12,17 @@
 
 - Next, to convert a file of gene fragments into fasta format for 10x to read, run the following command in the appropriate directly, which will label each fragment serially:
   - "awk -F',' 'NR>1 && NF>=2 { c[$1]++; printf(">E_coli|%s|fragment%d\n%s\n", $1, c[$1], $2) }' e_coli.csv > E_coli_fragments.fasta.txt" (replace .csv and .txt name")
-
+ 
+### Run 11/12/25 with 10x (Panel 9XQADF)
+- I ran this pipeline with 6 bacterial:
+| **Bacteria**      | **Pan Gig-genome threshold** | **Notes**                                                                 |
+|------------------|------------------------------|---------------------------------------------------------------------------------|
+| `A. muciniphila`       | `stringent100`      | .                   |
+| `B. fragilis`          | `stringent100`      | .           |
+| `C. aerofaciens`       | `stringent100`      | .               |
+| `E. coli`              | `stringent99`       | did not have any hits for stringent100 (probably incorrectly annotated genomes).                               |
+| `E. faecalis`          | `stringent100 and 99`      | did stringent 99 as not many genes for stringent 100.            |
+| `S. salivarius`        | `stringent100`      | .            |
 -------------------------------------------------------------
 # Approach below is outdated
 # Constructing a 16S rRNA database 
