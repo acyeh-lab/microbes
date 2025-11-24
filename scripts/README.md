@@ -46,4 +46,14 @@ for f in *.fna.gz; do
         found = 1
         exit 0    # found something in this file → stop early
       }
-    }```
+    }
+
+    END {
+      if (found) exit 0
+      else       exit 1
+    }
+  '; then
+    echo "$f"
+  fi
+done | wc -l
+```
