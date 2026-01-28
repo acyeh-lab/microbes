@@ -6,7 +6,7 @@
 - "ref_list.txt" contains the list of all species with reference genomes OR completely annotated genomes extracted from NCBI.
 - Full genome data is extracted to the following directory:
 ```
-/fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Ref_gut_human
+/fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Ref_gut_human/db
 ```
 
 ## Below is old strategy
