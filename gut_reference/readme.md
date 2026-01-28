@@ -1,10 +1,13 @@
-## Upated method of extracting reference genomes.
+## Upated method of extracting reference genomes (1/28/26).
 - Visit "https://github.com/acyeh-lab/microbes/tree/main/scripts/download_assemblies"
 - Use the "human_gut_reference_database.csv" list as below.
 - First download all taxon ID reference databases (--reference flag).  If no reference flag, download assembles with "complete" genomes available.
 - This gives us a database list of 2266 organisms (09/25/25).
 - "ref_list.txt" contains the list of all species with reference genomes OR completely annotated genomes extracted from NCBI.
-
+- Full genome data is extracted to the following directory:
+```
+/fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI/Ref_gut_human
+```
 
 ## Below is old strategy
 ### Human gut reference database
