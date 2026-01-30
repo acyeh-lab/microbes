@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#
 # genome_search.sh
 #
 # Summary:
@@ -29,28 +28,28 @@
 #   - FASTA strand orientation is arbitrary; both strands are searched
 #   - Script is safe for large genomes and large collections of files
 #   - Designed for SLURM environments
-#
+
+
 #SBATCH --job-name=genome_search
-#SBATCH --output=genome_search_%j.out
-#SBATCH --error=genome_search_%j.err
+#SBATCH --output=logs/genome_search_%j.out
+#SBATCH --error=logs/genome_search_%j.err
 #SBATCH --time=02:00:00
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=4G
+#SBATCH --mem=16G
+#SBATCH --partition campus-new
 
 set -euo pipefail
 
-# -------------------------
-# Argument checking
-# -------------------------
 if [[ $# -ne 3 ]]; then
   echo "Usage: sbatch $0 /path/to/folder \"PATTERN\" output_filename.txt"
-  echo "Example: sbatch $0 /fh/fast/hill_g/Albert \"AGAG\" AGAG_hits.txt"
   exit 2
 fi
 
 DIR="$1"
 pattern="$2"
 OUT="$3"
+
+mkdir -p logs
 
 if [[ ! -d "$DIR" ]]; then
   echo "ERROR: Directory not found: $DIR"
@@ -59,59 +58,64 @@ fi
 
 cd "$DIR"
 
-# -------------------------
-# Safe globbing
-# -------------------------
 shopt -s nullglob
-
-# -------------------------
-# Initialize output file (header = pattern)
-# -------------------------
-echo "$pattern" > "$OUT"
-
 files=( *.fna.gz )
+
 if [[ ${#files[@]} -eq 0 ]]; then
   echo "No .fna.gz files found in: $DIR"
   exit 0
 fi
 
-# -------------------------
-# Main search loop
-# -------------------------
+# Pick decompressor
+if command -v zcat >/dev/null 2>&1; then
+  DECOMP="zcat"
+elif command -v gzip >/dev/null 2>&1; then
+  DECOMP="gzip -cd"
+else
+  echo "ERROR: neither zcat nor gzip found on this node."
+  exit 1
+fi
+
+echo "$pattern" > "$OUT"
+
+echo "Found ${#files[@]} .fna.gz files in $DIR"
+
 for f in "${files[@]}"; do
-  if zcat "$f" | awk -v pat="$pattern" '
+  if $DECOMP "$f" | awk -v pat="$pattern" '
     BEGIN {
-      RS=">"; FS="\n"
+      patU = ""
+      for (i=1; i<=length(pat); i++) patU = patU toupper(substr(pat,i,1))
+      pat = patU
+      L = length(pat)
 
-      # Uppercase pattern
-      up = ""
-      for (i = 1; i <= length(pat); i++)
-        up = up toupper(substr(pat, i, 1))
-      pat = up
-
-      # Reverse complement
       rev = ""
-      for (i = length(pat); i >= 1; i--) {
-        c = substr(pat, i, 1)
-        if      (c == "A") rc = "T"
-        else if (c == "T") rc = "A"
-        else if (c == "C") rc = "G"
-        else if (c == "G") rc = "C"
-        else rc = c
+      for (i=L; i>=1; i--) {
+        c = substr(pat,i,1)
+        if      (c=="A") rc="T"
+        else if (c=="T") rc="A"
+        else if (c=="C") rc="G"
+        else if (c=="G") rc="C"
+        else rc=c
         rev = rev rc
       }
       pat_rc = rev
+
       found = 0
+      tail = ""
+      keep = (L>1 ? L-1 : 0)
     }
 
-    NR > 1 {
-      seq = ""
-      for (i = 2; i <= NF; i++)
-        seq = seq toupper($i)
+    /^>/ { tail=""; next }
 
-      if (index(seq, pat) || index(seq, pat_rc)) {
-        found = 1
-        exit
+    {
+      line = toupper($0)
+      s = tail line
+
+      if (!found && (index(s, pat) || index(s, pat_rc))) found = 1
+
+      if (keep > 0) {
+        if (length(s) > keep) tail = substr(s, length(s)-keep+1)
+        else tail = s
       }
     }
 
@@ -121,12 +125,10 @@ for f in "${files[@]}"; do
   fi
 done
 
-# -------------------------
-# Summary
-# -------------------------
 echo "Done."
 echo "Directory: $DIR"
 echo "Pattern:   $pattern"
 echo "Output:    $DIR/$OUT"
 echo -n "Hit count (excluding header): "
 tail -n +2 "$OUT" | wc -l
+
