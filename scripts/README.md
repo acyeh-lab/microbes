@@ -6,21 +6,23 @@
 
 
 ```
-pattern="ATGGCTGGAACCTGTAGTACGGACTTACGAGA"
+pattern="atgaggattgatatattaattggacatactagtttttttcatcaaaccagtagagataacttccttcactatctcaatgaggaagaaataaaacgctatgatcagtttcattttgtgagtgataaagaactctatattttaagccgtatcctgctcaaaacagcactaaaaagatatcaacctgatgtctcattacaatcatggcaatttagtacgtgcaaatatggcaaaccatttatagtttttcctcagttggcaaaaaagattttttttaacctttcccatactatagatacagtagccgttgctattagttctcactgcgagcttggtgtcgatattgaacaaataagagatttagacaactcttatctgaatatcagtcagcatttttttactccacaggaagctactaacatagtttcacttcctcgttatgaaggtcaattacttttttggaaaatgtggacgctcaaagaagcttacatcaaatatcgaggtaaaggcctatctttaggactggattgtattgaatttcatttaacaaataaaaaactaacttcaaaatatagaggttcacctgtttatttctctcaatggaaaatatgtaactcatttctcgcattagcctctccactcatcacccctaaaataactattgagctatttcctatgcagtcccaactttatcaccacgactatcagctaattcattcgtcaaatgggcagaattga"
+
+> hits.txt  # truncate / create output file
+
 for f in *.fna.gz; do
   if zcat "$f" | awk -v pat="$pattern" '
     BEGIN {
       RS=">"; FS="\n"
 
-      # 1) Uppercase the pattern once
+      # Uppercase the pattern
       up = ""
       for (i = 1; i <= length(pat); i++) {
-        c  = substr(pat, i, 1)
-        up = up toupper(c)
+        up = up toupper(substr(pat, i, 1))
       }
       pat = up
 
-      # 2) Build reverse complement of the pattern (also uppercase)
+      # Reverse complement
       rev = ""
       for (i = length(pat); i >= 1; i--) {
         c = substr(pat, i, 1)
@@ -28,33 +30,24 @@ for f in *.fna.gz; do
         else if (c == "T") rc = "A"
         else if (c == "C") rc = "G"
         else if (c == "G") rc = "C"
-        else               rc = c      # keep N or other symbols as-is
+        else rc = c
         rev = rev rc
       }
       pat_rc = rev
     }
 
-    # Skip the empty first record caused by RS=">"
     NR > 1 {
       seq = ""
-      # concatenate all sequence lines, uppercased
       for (i = 2; i <= NF; i++) {
         seq = seq toupper($i)
       }
-
-      # Look for either forward or reverse complement
-      if (index(seq, pat) > 0 || index(seq, pat_rc) > 0) {
-        found = 1
-        exit 0    # found something in this file → stop early
+      if (index(seq, pat) || index(seq, pat_rc)) {
+        exit 0
       }
     }
-
-    END {
-      if (found) exit 0
-      else       exit 1
-    }
+    END { exit 1 }
   '; then
-    echo "$f"
+    echo "$f" >> hits.txt
   fi
-done | wc -l
+done
 ```
