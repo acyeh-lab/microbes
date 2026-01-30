@@ -6,20 +6,19 @@
 
 
 ```
-pattern="atgaggattgatatattaattggacatactagtttttttcatcaaaccagtagagataacttccttcactatctcaatgaggaagaaataaaacgctatgatcagtttcattttgtgagtgataaagaactctatattttaagccgtatcctgctcaaaacagcactaaaaagatatcaacctgatgtctcattacaatcatggcaatttagtacgtgcaaatatggcaaaccatttatagtttttcctcagttggcaaaaaagattttttttaacctttcccatactatagatacagtagccgttgctattagttctcactgcgagcttggtgtcgatattgaacaaataagagatttagacaactcttatctgaatatcagtcagcatttttttactccacaggaagctactaacatagtttcacttcctcgttatgaaggtcaattacttttttggaaaatgtggacgctcaaagaagcttacatcaaatatcgaggtaaaggcctatctttaggactggattgtattgaatttcatttaacaaataaaaaactaacttcaaaatatagaggttcacctgtttatttctctcaatggaaaatatgtaactcatttctcgcattagcctctccactcatcacccctaaaataactattgagctatttcctatgcagtcccaactttatcaccacgactatcagctaattcattcgtcaaatgggcagaattga"
+pattern="G"
 
-> hits.txt  # truncate / create output file
+> hits.txt
 
 for f in *.fna.gz; do
   if zcat "$f" | awk -v pat="$pattern" '
     BEGIN {
       RS=">"; FS="\n"
 
-      # Uppercase the pattern
+      # Uppercase pattern
       up = ""
-      for (i = 1; i <= length(pat); i++) {
+      for (i = 1; i <= length(pat); i++)
         up = up toupper(substr(pat, i, 1))
-      }
       pat = up
 
       # Reverse complement
@@ -34,20 +33,24 @@ for f in *.fna.gz; do
         rev = rev rc
       }
       pat_rc = rev
+      found = 0
     }
 
     NR > 1 {
       seq = ""
-      for (i = 2; i <= NF; i++) {
+      for (i = 2; i <= NF; i++)
         seq = seq toupper($i)
-      }
+
       if (index(seq, pat) || index(seq, pat_rc)) {
-        exit 0
+        found = 1
+        exit
       }
     }
-    END { exit 1 }
+
+    END { exit(found ? 0 : 1) }
   '; then
     echo "$f" >> hits.txt
   fi
 done
+
 ```
