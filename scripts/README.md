@@ -1,4 +1,4 @@
-# This folder contains a collection of scripts
+# This folder contains a collection of random scripts I used at some point or another
 
 
 ## find_shared_regions.py
