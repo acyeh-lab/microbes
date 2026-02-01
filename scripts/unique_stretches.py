@@ -282,18 +282,18 @@ def main():
     # Write outputs
 
 
-    tsv_path = f"{args.out_prefix}.tsv"
+    ##tsv_path = f"{args.out_prefix}.tsv"
     fa_path  = f"{args.out_prefix}.fasta"
     hits_path = f"{args.out_prefix}.hits.tsv"
 
-    Path(tsv_path).parent.mkdir(parents=True, exist_ok=True)
+    ##Path(tsv_path).parent.mkdir(parents=True, exist_ok=True)
     Path(fa_path).parent.mkdir(parents=True, exist_ok=True)
     Path(hits_path).parent.mkdir(parents=True, exist_ok=True)
 
-    with open(tsv_path, "w") as tsv:
-        tsv.write("query_id\tstart0\tend0_excl\tlength\tsequence\n")
-        for idx, (s, e, seq) in enumerate(stretches, 1):
-            tsv.write(f"{query_name}\t{s}\t{e}\t{e-s}\t{seq}\n")
+    ##with open(tsv_path, "w") as tsv:
+    ##    tsv.write("query_id\tstart0\tend0_excl\tlength\tsequence\n")
+    ##    for idx, (s, e, seq) in enumerate(stretches, 1):
+    ##        tsv.write(f"{query_name}\t{s}\t{e}\t{e-s}\t{seq}\n")
 
     with open(fa_path, "w") as fa:
         for idx, (s, e, seq) in enumerate(stretches, 1):
@@ -302,7 +302,7 @@ def main():
             for i in range(0, len(seq), 60):
                 fa.write(seq[i:i+60] + "\n")
 
-    print(f"[out] wrote {tsv_path} and {fa_path}", file=sys.stderr)
+    print(f"[out] wrote {tsv_path}", file=sys.stderr)
 
     # Also write a per-kmer hits table (where the query IS found in the reference)
     write_hits_tsv(query_seq, query_name, ref_index, k, hits_path, max_hits_per_kmer=5)
