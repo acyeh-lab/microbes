@@ -1,3 +1,6 @@
+# This folder contains a collection of scripts
+
+
 ## find_shared_regions.py
 ```
 # Summary:
