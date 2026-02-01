@@ -31,7 +31,7 @@
 
 
 
-## To search for genome hits:
+## Scratchwork - To search for genome hits:
 **This function counts how many microbial genomes in this folder contain this DNA sequence (on either strand)**
 - Must take into account files being *.fna.gz
 - Also, must search for REVERSE COMPLEMENT as well! (forward genome is arbitrary)
