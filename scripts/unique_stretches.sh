@@ -36,6 +36,9 @@ set -euo pipefail
 #   <OUT_PREFIX>.fasta     FASTA of unique stretches
 #   <OUT_PREFIX>.hits.tsv  Per-kmer reference hits with FASTA headers and coordinates
 #
+# All result files are written under:
+#   outputs/<OUT_PREFIX>.{tsv,fasta,hits.tsv}
+#
 # Example:
 #   ./run_unique_stretches.sh --query "AATGGAAACAGGTGCTAATACCGCATAACAGTTTA" \
 #     /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI_data/Ref_gut_human/db/Enterococcus_faecalis/16S_rRNA \
@@ -94,6 +97,9 @@ if [[ ! -d "$REF_DIR" ]]; then
   echo "[ERROR] REF_DIR is not a directory: $REF_DIR" >&2
   exit 2
 fi
+
+# Force outputs into outputs/ directory
+OUT_PREFIX="outputs/${OUT_PREFIX}"
 
 # Build base command
 CMD=(python3 "$PY_SCRIPT"
