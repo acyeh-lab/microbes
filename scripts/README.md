@@ -1,4 +1,5 @@
 ## geneome_search.sh
+```
 # Summary:
 #   Scan a directory of gzipped FASTA genome files (*.fna.gz) for the presence
 #   of a DNA sequence pattern on either the forward strand or its reverse
@@ -26,6 +27,7 @@
 #   - FASTA strand orientation is arbitrary; both strands are searched
 #   - Script is safe for large genomes and large collections of files
 #   - Designed for SLURM environments
+```
 
 
 
