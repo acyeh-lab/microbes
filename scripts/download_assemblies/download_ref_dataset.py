@@ -1,4 +1,59 @@
 #!/usr/bin/env python3
+# Summary:
+#   Batch-download NCBI genome datasets for multiple organisms listed in a CSV
+#   file, using NCBI taxon IDs as the primary identifier.
+#
+#   For each organism (row in the CSV), the script:
+#     - Attempts to download a reference or representative genome using the
+#       NCBI Datasets CLI (--reference).
+#     - If no reference genome is available, falls back to downloading the
+#       best annotated COMPLETE genome assembly.
+#     - Requests genome FASTA, protein FASTA, and GFF3 annotation files.
+#     - Unzips the downloaded dataset into an organism-specific output directory.
+#     - Generates a metadata table (data_summary.tsv) using the NCBI Dataformat CLI.
+#
+# Inputs (CLI arguments):
+#   --csv     Path to a CSV file containing at least the columns:
+#               - NCBI.taxon.ID
+#               - scientific.name
+#   --outdir  Base output directory for downloaded datasets (default: "Downloads")
+#
+# CSV format expectations:
+#   Each row represents one organism/taxon. The script uses:
+#     - NCBI.taxon.ID      (integer taxonomic identifier)
+#     - scientific.name   (used for logging and directory naming)
+#
+# External dependencies:
+#   - pandas
+#   - NCBI Datasets CLI (`datasets`)
+#   - NCBI Dataformat CLI (`dataformat`)
+#   - unzip (system utility)
+#   All external tools must be installed and available on $PATH.
+#
+# Output:
+#   For each taxon, a subdirectory under --outdir containing:
+#     - ncbi_dataset.zip
+#         ZIP archive downloaded from NCBI
+#     - ncbi_dataset/
+#         Extracted dataset directory with genome, protein, and GFF3 files
+#     - ncbi_dataset/data/data_summary.tsv
+#         Tab-separated summary of assembly metadata (accession, N50, genome
+#         size, gene counts, BioProject, BioSample, etc.)
+#
+# Example:
+#   python download_ncbi_genomes_from_csv.py \
+#       --csv bacterial_taxa.csv \
+#       --outdir ncbi_genomes
+#
+# Notes / caveats:
+#   - The script prioritizes reference/representative genomes but
+#     falls back to best annotated complete assemblies if none exist.
+#   - Failed downloads for individual taxa are reported but do not halt the
+#     overall run, allowing batch processing.
+#   - The --assembly-level filter is only applied in the fallback path.
+#   - ZIP archives are overwritten on re-run for the same output directory.
+#   - The script assumes the CSV columns are correctly named and populated;
+#     no schema validation is performed.
 
 import pandas as pd
 import subprocess
