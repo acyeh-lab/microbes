@@ -2,89 +2,49 @@
 #SBATCH --job-name=genome_search
 #SBATCH --output=logs/unique_stretches_%j.out
 #SBATCH --error=logs/unique_stretches_%j.err
-#SBATCH --time=02:00:00
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=16G
+#SBATCH --time=2-00:00:00
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=256G
 #SBATCH --partition campus-new
 
 set -euo pipefail
+module purge
+module load Python/3.11.5-GCCcore-13.2.0
 
-# Summary:
-#   SLURM wrapper to run unique_stretches.py for identifying maximal "unique"
-#   query stretches (>= min_len) whose every k-mer window (default k=35) is absent
-#   from a reference FASTA database. Also writes a per-kmer hits table indicating
-#   where query k-mers DO match the reference (file, FASTA header, position, strand).
-#
-# Inputs:
-#   Mode A (literal query string):
-#     sbatch run_unique_stretches.sbatch --query "<SEQ>" REF_DIR [OUT_PREFIX] [K] [MIN_LEN]
-#
-#   Mode B (query FASTA; first record used):
-#     sbatch run_unique_stretches.sbatch --query_fasta QUERY.fa REF_DIR [OUT_PREFIX] [K] [MIN_LEN]
-#
-# Required:
-#   --query OR --query_fasta
-#   REF_DIR      Directory of reference FASTA files (searched recursively; .gz allowed)
-#
-# Optional:
-#   OUT_PREFIX   Output prefix (default: unique_stretches)
-#   K            k-mer length (default: 35)
-#   MIN_LEN      Minimum unique-stretch length (default: 35)
-#
-# Output:
-#   <OUT_PREFIX>.tsv        Unique stretches (query-centric)
-#   <OUT_PREFIX>.fasta     FASTA of unique stretches
-#   <OUT_PREFIX>.hits.tsv  Per-kmer reference hits with FASTA headers and coordinates
-#
-# All result files are written under:
-#   outputs/<OUT_PREFIX>.{tsv,fasta,hits.tsv}
-#
-# Example:
-#   ./run_unique_stretches.sh --query "AATGGAAACAGGTGCTAATACCGCATAACAGTTTA" \
-#     /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI_data/Ref_gut_human/db/Enterococcus_faecalis/16S_rRNA \
-#     my_probe_candidates 35 35
-#
-# Notes:
-#   - Uses python3 explicitly (important on clusters where `python` is Python 2)
-#   - Logs written to logs/genome_search_<jobid>.out/.err
-#   - Ensure the logs/ directory exists before submission
+echo "[INFO] Python: $(which python3)" >&2
+python3 -V >&2
 
 usage() {
   cat <<'EOF'
 Usage:
   sbatch run_unique_stretches.sbatch --query "<SEQ>" REF_DIR [OUT_PREFIX] [K] [MIN_LEN]
   sbatch run_unique_stretches.sbatch --query_fasta QUERY_FASTA REF_DIR [OUT_PREFIX] [K] [MIN_LEN]
-
-Examples:
-  sbatch run_unique_stretches.sbatch \
-    --query "AATGGAAACAGGTGCTAATACCGCATAACAGTTTA" \
-    /path/to/ref_dir \
-    my_probe_candidates 35 35
-
-  sbatch run_unique_stretches.sbatch \
-    --query_fasta query.fa \
-    /path/to/ref_dir \
-    my_probe_candidates 40 50
 EOF
 }
 
-# --- basic argument checking ---
-if [[ $# -lt 3 ]]; then
+# ---- minimal arg sanity check ----
+if [[ $# -lt 2 ]]; then
   usage
   exit 2
 fi
 
 MODE="$1"
 QVAL="$2"
-REF_DIR="$3"
+REF_DIR="${3:-}"
 OUT_PREFIX="${4:-unique_stretches}"
 K="${5:-35}"
 MIN_LEN="${6:-35}"
 
-# Ensure logs directory exists
-mkdir -p logs
+# Ensure required positional REF_DIR exists
+if [[ -z "${REF_DIR}" ]]; then
+  echo "[ERROR] REF_DIR is required" >&2
+  usage
+  exit 2
+fi
 
-# Resolve script path
+# Ensure logs + outputs directories exist
+mkdir -p logs outputs
+
 SCRIPT_DIR="/fh/fast/hill_g/Albert/Collaboration-Microbiome/Scripts"
 PY_SCRIPT="${SCRIPT_DIR}/unique_stretches.py"
 
@@ -98,15 +58,14 @@ if [[ ! -d "$REF_DIR" ]]; then
   exit 2
 fi
 
-# Force outputs into outputs/ directory
 OUT_PREFIX="outputs/${OUT_PREFIX}"
 
-# Build base command
 CMD=(python3 "$PY_SCRIPT"
      --ref_dir "$REF_DIR"
      -k "$K"
      --min_len "$MIN_LEN"
-     --out_prefix "$OUT_PREFIX")
+     --out_prefix "$OUT_PREFIX"
+     --workers "${SLURM_CPUS_PER_TASK:-1}")
 
 case "$MODE" in
   --query)
@@ -127,6 +86,7 @@ case "$MODE" in
 esac
 
 echo "[INFO] Job started on $(hostname) at $(date)" >&2
+echo "[INFO] Using ${SLURM_CPUS_PER_TASK:-1} worker(s)" >&2
 echo "[INFO] Running command:" >&2
 printf ' %q' "${CMD[@]}" >&2
 echo >&2
@@ -134,8 +94,8 @@ echo >&2
 "${CMD[@]}"
 
 echo "[INFO] Job finished at $(date)" >&2
-echo "[INFO] Outputs:" >&2
-echo "  ${OUT_PREFIX}.tsv" >&2
+echo "[INFO] Outputs written:" >&2
 echo "  ${OUT_PREFIX}.fasta" >&2
 echo "  ${OUT_PREFIX}.hits.tsv" >&2
+
 
