@@ -1,4 +1,76 @@
 #!/usr/bin/env python3
+
+# Summary:
+#   Pre-download and locally cache NCBI genome assemblies (GCA_/GCF_) for a set
+#   of accessions, producing one concatenated genomic FASTA per assembly.
+#
+#   The script is designed for large, messy inputs and batch usage (e.g. SLURM),
+#   and is robust to differences across NCBI Datasets CLI versions.
+#
+#   Specifically, the script:
+#     - Reads an input CSV/TSV/plain-text file and extracts all GCA_/GCF_ assembly
+#       accessions using regex (no strict header or column format required).
+#     - For each accession:
+#         * Downloads the assembly using the NCBI Datasets CLI.
+#         * Tries multiple --include argument variants for compatibility with
+#           different CLI versions.
+#         * Retries failed downloads with backoff.
+#         * Unzips the dataset output.
+#         * Locates all genomic FASTA files (*_genomic.fna or *.fna).
+#         * Concatenates them into a single per-accession FASTA file.
+#     - Runs downloads in parallel using a thread pool.
+#     - Skips assemblies that are already cached locally.
+#     - Writes a CSV manifest summarizing success/failure and file locations.
+#
+# Inputs (CLI arguments):
+#   --table       Input CSV/TSV/plain-text file containing GCA_/GCF_ accessions
+#                 (anywhere in the file; header not required).
+#   --acc-col     Column name to read (currently unused; accessions are detected
+#                 via regex across the entire file).
+#   --cache-dir   Directory to store downloaded datasets and FASTA files
+#                 (default: genome_cache).
+#   --workers     Number of parallel downloads (default: 6).
+#   --manifest    Output CSV summarizing download results (default: manifest.csv).
+#   --debug       Print debug information about detected accessions.
+#
+# External dependencies:
+#   - NCBI Datasets CLI (`datasets`)
+#   - unzip (system utility)
+#   All external tools must be installed and available on $PATH.
+#
+# Output:
+#   For each accession ACC (e.g. GCF_000005845.2):
+#     cache-dir/
+#       ACC/
+#         ncbi_dataset.zip
+#         ncbi_dataset/
+#         ACC_genomic.fna        (concatenated genomic FASTA)
+#
+#   Manifest file (CSV) with columns:
+#     accession, status, fasta, size_bytes, message
+#
+#   Where status ∈ {ok, cached, error}.
+#
+# Example:
+#   python cache_ncbi_assemblies.py \
+#       --table assemblies.csv \
+#       --cache-dir genome_cache \
+#       --workers 8 \
+#       --manifest genome_manifest.csv
+#
+# Notes / design choices:
+#   - Accessions are detected via regex (GC[AF]_<digits>.<version>), making the
+#     script robust to poorly formatted input tables.
+#   - The script is tolerant of Datasets CLI changes by trying multiple
+#     --include options.
+#   - All contigs for an assembly are concatenated into a single FASTA to
+#     simplify downstream BLAST or k-mer indexing.
+#   - Failed downloads do not halt the pipeline; errors are logged and reported
+#     in the manifest.
+#   - Designed for reproducible, large-scale genome caching prior to alignment
+#     or uniqueness screening workflows.
+
+
 import argparse, csv, os, re, sys, shutil, time
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -184,3 +256,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
