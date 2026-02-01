@@ -1,5 +1,70 @@
 #!/usr/bin/env python3
 
+# Summary:
+#   Unpack genome and protein FASTA files from an NCBI Datasets genome package
+#   (the "ncbi_dataset/" directory) and generate per-folder sample sheets that
+#   combine file paths with NCBI assembly metadata.
+#
+#   The script:
+#     - Reads an NCBI Datasets "manifest" (a JSON structure expected to contain
+#       a top-level key 'assemblies').
+#     - For each assembly in manifest['assemblies']:
+#         * Locates files of type GENOMIC_NUCLEOTIDE_FASTA and PROTEIN_FASTA
+#         * Copies each file from ncbi_dataset/data/<filePath> into:
+#             - genomes/   (for genomic FASTA)
+#             - proteins/  (for protein FASTA)
+#         * Writes the copied file as gzip-compressed output (*.gz), even if the
+#           source file is not gzipped.
+#         * Builds two in-memory manifest lists:
+#             - genomic_manifest: [{sample: <accession>, file: <filename>}, ...]
+#             - protein_manifest: [{sample: <accession>, file: <filename>}, ...]
+#     - Writes two CSV sample sheets:
+#         - genomes/samplesheet.csv
+#         - proteins/samplesheet.csv
+#       Each samplesheet includes:
+#         - sample (assembly accession)
+#         - file (copied filename in genomes/ or proteins/)
+#       And merges in metadata from:
+#         - ncbi_dataset/data/data_summary.tsv
+#       via Assembly Accession.
+#
+# Inputs / expected files:
+#   - An NCBI Datasets output directory structure in the current working directory:
+#       ncbi_dataset/
+#         data/
+#           data_summary.tsv
+#           <files referenced by manifest.json>
+#   - A JSON manifest file (read by read_manifest()) containing:
+#       {"assemblies": [{"accession": "...", "files": [...]} , ...]}
+#     NOTE: read_manifest() is referenced but not shown in this snippet.
+#
+# Output:
+#   - genomes/
+#       *.fna.gz (or similar genome FASTA filenames)
+#       samplesheet.csv
+#   - proteins/
+#       *_protein.faa.gz
+#       samplesheet.csv
+#
+# Example usage:
+#   python unpack_ncbi_dataset_to_samplesheets.py
+#   (Run in a directory that contains ncbi_dataset/ and the manifest JSON.)
+#
+# Notes / caveats:
+#   - This script assumes the NCBI metadata table has a column named
+#     "Assembly Accession" and merges on that field.
+#   - The genome filename is derived from the original filePath basename.
+#     The protein filename is forced to "<accession>_protein.faa.gz".
+#   - copy_file() reads the entire input file into memory (txt = open(...).read()).
+#     For large FASTA files this can be very memory-inefficient; streaming copy
+#     is preferable.
+#   - The provided snippet ends mid-line ("hand..."), suggesting copy_file() is
+#     incomplete as pasted; as written it would raise an exception.
+#   - The code appends ".gz" to outputs unconditionally; it does not preserve
+#     original compression state.
+
+
+
 import gzip
 import json
 import pandas as pd
