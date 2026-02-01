@@ -40,6 +40,7 @@ set -euo pipefail
 #   ./run_unique_stretches.sh --query "AATGGAAACAGGTGCTAATACCGCATAACAGTTTA" \
 #     /fh/fast/hill_g/Albert/Collaboration-Microbiome/NCBI_data/Ref_gut_human/db/Enterococcus_faecalis/16S_rRNA \
 #     my_probe_candidates 35 35
+#
 # Notes:
 #   - Uses python3 explicitly (important on clusters where `python` is Python 2)
 #   - Logs written to logs/genome_search_<jobid>.out/.err
@@ -80,8 +81,8 @@ MIN_LEN="${6:-35}"
 # Ensure logs directory exists
 mkdir -p logs
 
-# Resolve script path (assumes unique_stretches.py is in same directory)
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Resolve script path
+SCRIPT_DIR="/fh/fast/hill_g/Albert/Collaboration-Microbiome/Scripts"
 PY_SCRIPT="${SCRIPT_DIR}/unique_stretches.py"
 
 if [[ ! -f "$PY_SCRIPT" ]]; then
